@@ -1,0 +1,24 @@
+#!/bin/bash
+# What CI runs. Run it at a terminal to get CI's verdict before pushing.
+#
+# Every check is a pre-commit hook, so one invocation covers lint, format,
+# typecheck, the toolchain selftest, and file hygiene -- and CI cannot drift
+# from what a commit already had to pass. A hook that rewrites a file fails,
+# and the diff it would have made is printed.
+set -euo pipefail
+shopt -s failglob
+export DEBUG="${DEBUG:-0}"
+
+onerror() {
+  error="$?"
+  echo >&2 "ERROR($error)"
+  exit "$error"
+}
+trap onerror ERR
+
+if (( DEBUG > 0 )); then
+  set -x
+fi
+
+cd "$(git rev-parse --show-toplevel)"
+pre-commit run --all-files --show-diff-on-failure

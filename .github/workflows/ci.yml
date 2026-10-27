@@ -1,0 +1,34 @@
+# Only environment setup lives here. The checks themselves are lib/ci/check,
+# which runs identically at a terminal.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      # pnpm version comes from package.json `packageManager`, node from
+      # `engines`: one declaration serves CI and local dev alike.
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: package.json
+
+      - name: Install what the Brewfile would install
+        run: |
+          sudo apt-get install -y direnv
+          pipx install pre-commit
+
+      # The same environment a developer's shell gets from direnv.
+      - name: Load .envrc
+        run: |
+          direnv allow .
+          direnv export gha >> "$GITHUB_ENV"
+
+      - run: lib/ci/check
