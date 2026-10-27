@@ -1,0 +1,5 @@
+{
+  "why": "tsc (TS 7) catches type errors; oxlint does not, so the typecheck hook is load-bearing",
+  "diagnostics": [],
+  "tsc": ["TS2322 src/a.ts:1"]
+}

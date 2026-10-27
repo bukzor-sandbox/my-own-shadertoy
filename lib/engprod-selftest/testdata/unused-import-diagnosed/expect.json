@@ -1,0 +1,4 @@
+{
+  "why": "an unused import is an error",
+  "diagnostics": ["error eslint(no-unused-vars) src/a.ts:1"]
+}

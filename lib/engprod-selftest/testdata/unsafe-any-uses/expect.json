@@ -1,0 +1,9 @@
+{
+  "why": "the rest of the no-unsafe-* family: any may not be called, indexed into, passed on, or returned as a typed value",
+  "diagnostics": [
+    "error typescript(no-unsafe-argument) src/a.ts:13",
+    "error typescript(no-unsafe-call) src/a.ts:5",
+    "error typescript(no-unsafe-member-access) src/a.ts:9",
+    "error typescript(no-unsafe-return) src/a.ts:17"
+  ]
+}

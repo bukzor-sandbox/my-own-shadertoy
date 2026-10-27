@@ -1,0 +1,7 @@
+{
+  "why": "type-only imports are written `import type`; both oxlint and tsc (verbatimModuleSyntax) object, and fix repairs it",
+  "diagnostics": ["error typescript(consistent-type-imports) src/a.ts:1"],
+  "tsc": ["TS1484 src/a.ts:1"],
+  "fixed": true,
+  "remaining": []
+}

@@ -1,0 +1,4 @@
+{
+  "why": "console output is a warning, not an error",
+  "diagnostics": ["warning eslint(no-console) src/a.ts:1"]
+}

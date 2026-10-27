@@ -1,0 +1,4 @@
+{
+  "why": "values typed any may not leak into typed code",
+  "diagnostics": ["error typescript(no-unsafe-assignment) src/a.ts:3"]
+}

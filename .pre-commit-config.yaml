@@ -1,5 +1,8 @@
 # yaml-language-server: $schema=https://json.schemastore.org/pre-commit-config.json
 
+# Test data is deliberately malformed; no hook may "fix" it.
+exclude: /testdata/
+
 repos:
   # Project-specific hooks are local so dev tooling and pre-commit always match
   - repo: local
@@ -23,9 +26,17 @@ repos:
       # Whole-workspace typecheck, after formatting for cleaner output
       - id: typecheck
         name: typecheck
-        entry: bin/pnpm-run pnpm -r --if-present run typecheck
+        entry: bin/pnpm-run pnpm run typecheck
         language: system
         types_or: [ts, tsx, json]
+        pass_filenames: false
+
+      # The toolchain's own regression suite; only when it or its config moves
+      - id: engprod-selftest
+        name: engprod selftest
+        entry: bin/pnpm-run pnpm run selftest
+        language: system
+        files: ^(\.oxlintrc\.json|\.oxfmtrc\.json|\.editorconfig|tsconfig\.base\.json|package\.json|lib/engprod-selftest/)
         pass_filenames: false
 
   # Standard file hygiene hooks

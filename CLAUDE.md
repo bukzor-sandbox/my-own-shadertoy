@@ -25,11 +25,16 @@ pre-commit run --all-files
 - `pnpm fix` -- oxlint --fix, then oxfmt
 - `pnpm lint` -- oxlint, no writes
 - `pnpm format` -- oxfmt (formatting and import sorting)
-- `pnpm typecheck` -- every workspace's `typecheck`
+- `pnpm typecheck` -- every workspace's `typecheck`, plus the selftest's
+- `pnpm selftest` -- `lib/engprod-selftest`: the toolchain's own regression
+  suite. Each `testdata/<case>/` is a small project plus an `expect.json` naming
+  what lint, format, and typecheck must do with it. `testdata/` is excluded from
+  every tool and hook.
 
-Pre-commit runs oxlint --fix, oxfmt, and typecheck, plus file-hygiene hooks.
-Tool invocations go through `bin/pnpm-run`, which runs `pnpm install` first so
-hooks never see stale dependencies.
+Pre-commit runs oxlint --fix, oxfmt, and typecheck, plus file-hygiene hooks; the
+selftest runs only when it or the tool config changes. Tool invocations go
+through `bin/pnpm-run`, which runs `pnpm install` first so hooks never see stale
+dependencies.
 
 ## Toolchain
 

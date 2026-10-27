@@ -1,0 +1,4 @@
+{
+  "why": "functions over 40 lines warn",
+  "diagnostics": ["warning eslint(max-lines-per-function) src/a.ts:1"]
+}

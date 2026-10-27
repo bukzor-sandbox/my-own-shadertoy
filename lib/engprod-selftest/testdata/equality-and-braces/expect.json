@@ -1,0 +1,9 @@
+{
+  "why": "curly is autofixed; eqeqeq is reported but needs a human",
+  "diagnostics": [
+    "error eslint(curly) src/a.ts:2",
+    "error eslint(eqeqeq) src/a.ts:2"
+  ],
+  "fixed": true,
+  "remaining": ["error eslint(eqeqeq) src/a.ts:2"]
+}

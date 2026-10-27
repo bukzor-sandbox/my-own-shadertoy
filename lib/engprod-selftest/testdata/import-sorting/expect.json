@@ -1,0 +1,5 @@
+{
+  "why": "import order is the formatter's job (oxfmt sortImports), not a lint finding",
+  "diagnostics": [],
+  "fixed": true
+}

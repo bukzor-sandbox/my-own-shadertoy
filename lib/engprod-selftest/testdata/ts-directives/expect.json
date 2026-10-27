@@ -1,0 +1,12 @@
+{
+  "why": "ts-ignore is banned, ts-expect-error needs a description; fix converts the first but cannot invent a description",
+  "diagnostics": [
+    "error typescript(ban-ts-comment) src/a.ts:1",
+    "error typescript(ban-ts-comment) src/a.ts:4"
+  ],
+  "remaining": [
+    "error typescript(ban-ts-comment) src/a.ts:1",
+    "error typescript(ban-ts-comment) src/a.ts:4"
+  ],
+  "tsc": []
+}

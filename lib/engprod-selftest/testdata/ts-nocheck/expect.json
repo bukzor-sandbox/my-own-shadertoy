@@ -1,0 +1,4 @@
+{
+  "why": "ts-nocheck is banned",
+  "diagnostics": ["error typescript(ban-ts-comment) src/a.ts:1"]
+}

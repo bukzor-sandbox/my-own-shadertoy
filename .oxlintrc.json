@@ -9,7 +9,7 @@
     "typeAware": true,
     "reportUnusedDisableDirectives": "error"
   },
-  "ignorePatterns": ["**/dist/", "trash/"],
+  "ignorePatterns": ["**/dist/", "trash/", "**/testdata/"],
   "rules": {
     "curly": ["error", "all"],
     "eqeqeq": "error",

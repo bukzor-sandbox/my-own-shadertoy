@@ -1,0 +1,6 @@
+{
+  "why": "well-formed code draws no findings and is left alone (guards against false positives)",
+  "diagnostics": [],
+  "tsc": [],
+  "unchangedByFix": true
+}

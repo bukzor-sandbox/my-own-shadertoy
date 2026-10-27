@@ -1,0 +1,4 @@
+{
+  "why": "oxfmt formats TS, TOML, JSON5, YAML and prose markdown (it replaced prettier)",
+  "fixed": true
+}

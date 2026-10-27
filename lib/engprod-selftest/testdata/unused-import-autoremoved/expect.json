@@ -1,0 +1,5 @@
+{
+  "why": "the old ESLint setup removed unused imports on --fix",
+  "fixed": true,
+  "knownGap": "oxlint reports unused imports but never removes them, even with --fix-dangerous"
+}

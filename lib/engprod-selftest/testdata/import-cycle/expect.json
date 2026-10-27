@@ -1,0 +1,7 @@
+{
+  "why": "dependencies stay a DAG, so import cycles are errors",
+  "diagnostics": [
+    "error import(no-cycle) src/a.ts:1",
+    "error import(no-cycle) src/b.ts:1"
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "why": "a default branch must not hide a union member nobody handled",
+  "diagnostics": [
+    "error typescript(switch-exhaustiveness-check) src/a.ts:4"
+  ]
+}

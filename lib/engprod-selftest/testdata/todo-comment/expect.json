@@ -1,0 +1,7 @@
+{
+  "why": "obligations belong in failing checks, so TODO/FIXME comments are errors",
+  "diagnostics": [
+    "error eslint(no-warning-comments) src/a.ts:1",
+    "error eslint(no-warning-comments) src/a.ts:4"
+  ]
+}

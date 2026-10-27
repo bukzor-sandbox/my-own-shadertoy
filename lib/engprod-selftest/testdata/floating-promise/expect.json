@@ -1,0 +1,4 @@
+{
+  "why": "type-aware rules work on TS 7: a dropped promise is an error",
+  "diagnostics": ["error typescript(no-floating-promises) src/a.ts:6"]
+}
