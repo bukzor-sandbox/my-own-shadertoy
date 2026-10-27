@@ -9,11 +9,12 @@ repos:
     hooks:
       # Type-aware lint needs the whole program, so it takes no filenames.
       # Autofix first, then format (oxfmt has the last word).
+      # json: its config, tsconfig, and package.json (tool versions) are inputs.
       - id: oxlint
         name: oxlint
         entry: bin/pnpm-run oxlint --fix
         language: system
-        types_or: [javascript, jsx, ts, tsx]
+        types_or: [javascript, jsx, ts, tsx, json]
         pass_filenames: false
 
       # Formatter and import sorting -- configured in .oxfmtrc.json
