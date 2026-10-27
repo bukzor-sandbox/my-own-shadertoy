@@ -13,7 +13,8 @@ why:
 Each line is a milestone: what lands, then the packages it introduces. Package
 names are first guesses, corrected at each milestone. One list, in order,
 because the ladder is linear; a milestone that turns out too large splits into
-`N.M` sub-milestones in place.
+`N.M` sub-milestones in place. A milestone's line ends in "Landed." once its
+commit is in; the first line without it is the next milestone.
 
 - **0.0** `bin/new-package` stamps a package. Landed.
 - **0.1** Adapter and device; log limits and features; handle device loss; show

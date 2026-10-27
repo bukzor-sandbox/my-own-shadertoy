@@ -36,8 +36,10 @@ This is a learning project, so the learning-bearing work is bukzor's.
 
 `docs/dev/claims.kb/` is the design, kept as a claim ledger: mission, goals,
 requirements, architecture, deliverables (the milestone ladder), and technical
-policy. Start at `docs/dev/claims.kb/design.md`. Reading it needs nothing
-installed; maintaining it follows [llm-design-kb] and [llm-claims-kb].
+policy. Start at `docs/dev/claims.kb/design.md`. The roadmap is
+`docs/dev/claims.kb/design.kb/deliverables.kb/milestone-ladder.md`. Reading it
+needs nothing installed; maintaining it follows [llm-design-kb] and
+[llm-claims-kb].
 
 ## Setup
 
