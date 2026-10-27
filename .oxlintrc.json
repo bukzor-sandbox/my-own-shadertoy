@@ -1,0 +1,57 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["typescript", "import", "unicorn", "oxc"],
+  "categories": {
+    "correctness": "error",
+    "suspicious": "error"
+  },
+  "options": {
+    "typeAware": true,
+    "reportUnusedDisableDirectives": "error"
+  },
+  "ignorePatterns": ["**/dist/", "trash/"],
+  "rules": {
+    "curly": ["error", "all"],
+    "eqeqeq": "error",
+    "no-console": "warn",
+    "object-shorthand": "error",
+    "prefer-const": "error",
+    "prefer-template": "error",
+    "max-lines-per-function": [
+      "warn",
+      { "max": 40, "skipBlankLines": true, "skipComments": true }
+    ],
+
+    "no-warning-comments": [
+      "error",
+      { "terms": ["todo", "fixme", "xxx"], "location": "anywhere" }
+    ],
+
+    "typescript/ban-ts-comment": [
+      "error",
+      { "ts-expect-error": "allow-with-description" }
+    ],
+    "typescript/consistent-type-imports": "error",
+    "typescript/switch-exhaustiveness-check": [
+      "error",
+      { "considerDefaultExhaustiveForUnions": false }
+    ],
+    "typescript/prefer-readonly": "error",
+
+    "typescript/await-thenable": "error",
+    "typescript/no-confusing-void-expression": "error",
+    "typescript/no-floating-promises": "error",
+    "typescript/no-misused-promises": "error",
+    "typescript/no-unnecessary-condition": "error",
+    "typescript/no-unnecessary-type-assertion": "error",
+    "typescript/no-unsafe-argument": "error",
+    "typescript/no-unsafe-assignment": "error",
+    "typescript/no-unsafe-call": "error",
+    "typescript/no-unsafe-member-access": "error",
+    "typescript/no-unsafe-return": "error",
+    "typescript/restrict-template-expressions": "error",
+
+    "import/no-cycle": "error",
+    "import/no-duplicates": "error"
+  }
+}

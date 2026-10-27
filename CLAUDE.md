@@ -4,7 +4,7 @@ git-caution: personal
 
 # my-own-shadertoy
 
-A pnpm workspace (TypeScript, WebGL), laid out like
+A pnpm workspace (TypeScript 7, WebGL), laid out like
 `~/repo/github.com/bukzor/template.python-project`.
 
 - `apps/*` -- deployable things
@@ -22,27 +22,32 @@ pre-commit run --all-files
 
 ## Commands
 
-- `pnpm fix` -- eslint --fix, then prettier --write
-- `pnpm lint` -- eslint, no writes
+- `pnpm fix` -- oxlint --fix, then oxfmt
+- `pnpm lint` -- oxlint, no writes
+- `pnpm format` -- oxfmt (formatting and import sorting)
 - `pnpm typecheck` -- every workspace's `typecheck`
 
-Pre-commit runs eslint --fix, prettier, and typecheck, plus file-hygiene hooks.
+Pre-commit runs oxlint --fix, oxfmt, and typecheck, plus file-hygiene hooks.
 Tool invocations go through `bin/pnpm-run`, which runs `pnpm install` first so
 hooks never see stale dependencies.
 
-## TypeScript 7 beside 6
+## Toolchain
 
-`tsc` is TypeScript 7 (package `typescript-7`). The `typescript` package is
-aliased to `@typescript/typescript6` because typescript-eslint needs the TS 6
-API; TS 7 ships no JS API until 7.1 (tracking:
-typescript-eslint/typescript-eslint#10940, native backend in #12803). Once a
-typescript-eslint release supports TS 7.1, drop the alias and the `typescript-7`
-entry and use plain `typescript`.
+TypeScript 7 (native) has no JS API until 7.1, so typescript-eslint cannot run
+on it (typescript-eslint/typescript-eslint#10940). Lint is therefore oxlint,
+whose type-aware rules (`oxlint-tsgolint`) run on typescript-go; formatting and
+import sorting are oxfmt. There is no ESLint or Prettier here.
+
+Known gap: oxlint reports unused imports (`no-unused-vars`) but does not
+auto-remove them.
 
 ## Lint stance
 
+- Type-aware rules (`typescript/*`) are on, notably no-floating-promises and the
+  no-unsafe-\* family.
 - No `@ts-ignore` / `@ts-nocheck`; `@ts-expect-error` needs a description. A
   disable directive that stops firing is itself an error.
 - No TODO/FIXME comments: an obligation goes in a failing check.
 - A `switch` over a union lists every member; a new member must fail loudly.
+- Import cycles are errors (dependencies stay a DAG).
 - Functions over ~40 lines warn.
