@@ -7,7 +7,7 @@
     "lint": "oxlint",
     "fix": "oxlint --fix && oxfmt",
     "format": "oxfmt",
-    "typecheck": "pnpm -r --if-present run typecheck && tsc -p lib/engprod-selftest",
+    "typecheck": "pnpm -r exec tsc -p . && tsc -p lib/engprod-selftest",
     "selftest": "node --test lib/engprod-selftest/*.test.ts"
   },
   "devDependencies": {
@@ -16,5 +16,9 @@
     "oxlint": "^1.89.0",
     "oxlint-tsgolint": "^7.0.2005",
     "typescript": "^7.0.2"
-  }
+  },
+  "engines": {
+    "node": ">=22.18"
+  },
+  "packageManager": "pnpm@12.15.0"
 }

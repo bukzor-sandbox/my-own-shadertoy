@@ -13,12 +13,12 @@
   "rules": {
     "curly": ["error", "all"],
     "eqeqeq": "error",
-    "no-console": "warn",
+    "no-console": "error",
     "object-shorthand": "error",
     "prefer-const": "error",
     "prefer-template": "error",
     "max-lines-per-function": [
-      "warn",
+      "error",
       { "max": 40, "skipBlankLines": true, "skipComments": true }
     ],
 

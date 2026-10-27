@@ -1,4 +1,4 @@
 {
-  "why": "functions over 40 lines warn",
-  "diagnostics": ["warning eslint(max-lines-per-function) src/a.ts:1"]
+  "why": "functions over 40 lines fail lint; no rule is advisory",
+  "diagnostics": ["error eslint(max-lines-per-function) src/a.ts:1"]
 }
