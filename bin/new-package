@@ -1,0 +1,80 @@
+#!/bin/bash
+# Stamp a new workspace package: bin/new-package GROUP/THING 'its one job'
+#
+# GROUP is a lifetime group (a directory under packages/ holding a CLAUDE.md,
+# or `apps`). THING is a descriptive kebab-case phrase. The job statement is
+# required: it becomes the README, so no package exists without one.
+#
+# The stamped src/index.ts is empty and fails lint (no-empty-file) until it
+# holds code: a package with nothing in it is an obligation, not a commit.
+set -euo pipefail
+shopt -s failglob
+export DEBUG="${DEBUG:-0}"
+
+onerror() {
+  error="$?"
+  echo >&2 "ERROR($error)"
+  exit "$error"
+}
+trap onerror ERR
+
+usage() {
+  echo >&2 "usage: $0 GROUP/THING 'one-paragraph job statement'"
+  exit 2
+}
+
+if (( DEBUG > 0 )); then
+  set -x
+fi
+
+(( $# == 2 )) || usage
+spec="$1"
+job="$2"
+[[ "$spec" =~ ^([a-z]+)/([a-z0-9]+(-[a-z0-9]+)*)$ ]] || usage
+group="${BASH_REMATCH[1]}"
+thing="${BASH_REMATCH[2]}"
+[[ -n "$job" ]] || usage
+
+cd "$(git rev-parse --show-toplevel)"
+if [[ "$group" == apps ]]; then
+  dir="apps/$thing"
+  groupdir="apps"
+else
+  dir="packages/$group/$thing"
+  groupdir="packages/$group"
+fi
+name="$group-$thing"
+
+if [[ ! -f "$groupdir/CLAUDE.md" ]]; then
+  echo >&2 "no lifetime group at $groupdir (it needs a CLAUDE.md)"
+  exit 1
+fi
+if [[ -e "$dir" ]]; then
+  echo >&2 "already exists: $dir"
+  exit 1
+fi
+
+mkdir -p "$dir/src"
+base="$(realpath --relative-to="$dir" tsconfig.base.json)"
+
+cat > "$dir/package.json" <<EOF
+{
+  "name": "$name",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": "./src/index.ts"
+}
+EOF
+
+cat > "$dir/tsconfig.json" <<EOF
+{
+  "extends": "$base",
+  "include": ["src"]
+}
+EOF
+
+printf '# %s\n\n%s\n' "$name" "$job" > "$dir/README.md"
+echo 'export {};' > "$dir/src/index.ts"
+
+echo "$dir"

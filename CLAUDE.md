@@ -4,14 +4,40 @@ git-caution: personal
 
 # my-own-shadertoy
 
-A pnpm workspace (TypeScript 7, WebGL), laid out like
+A compute-first Shadertoy-alike, built so bukzor learns WebGPU and GPGPU
+programming. A pnpm workspace (TypeScript 7, WebGPU), laid out like
 `~/repo/github.com/bukzor/template.python-project`.
 
-- `apps/*` -- deployable things
-- `packages/*` -- libraries the apps share
+- `packages/<group>/<thing>` -- one small package per thing, grouped by
+  lifetime. Each group's `CLAUDE.md` says who writes there.
+  - kept: `program/` (the program as data), `gpu/` (WebGPU glue and runner),
+    `passes/` (one package per pass kind)
+  - throwaway: `ui/` (editor, panels)
+- `apps/*` -- throwaway wiring that composes packages into a page
+- `bin/new-package GROUP/THING 'its one job'` stamps a package; the job
+  statement becomes its README.
 - Each workspace has a `tsconfig.json` extending `tsconfig.base.json`; the root
   `typecheck` runs `tsc` in every workspace, and one without a tsconfig fails
   it.
+
+## Who writes what
+
+This is a learning project, so the learning-bearing work is bukzor's.
+
+- In kept groups, write code only when bukzor directly asks, and only what was
+  asked. Decline, saying why, when the request is the learning: a first use of a
+  WebGPU API or WGSL feature, or a design bukzor is meant to work out. Instead
+  explain, review, test bukzor's hypothesis without fixing, or put a worked
+  example in `trash/` when asked for one.
+- In throwaway groups, write freely once bukzor has written the first instance
+  of that kind of part.
+
+## Design docs
+
+`docs/dev/claims.kb/` is the design, kept as a claim ledger: mission, goals,
+requirements, architecture, deliverables (the milestone ladder), and technical
+policy. Start at `docs/dev/claims.kb/design.md`. Reading it needs nothing
+installed; maintaining it follows [llm-design-kb] and [llm-claims-kb].
 
 ## Setup
 
@@ -66,3 +92,8 @@ auto-remove them.
 - A `switch` over a union lists every member; a new member must fail loudly.
 - Import cycles are errors (dependencies stay a DAG).
 - Functions over 40 lines fail; `console` use fails.
+
+[llm-design-kb]:
+  https://github.com/bukzor/bukzor-agent-skills/blob/main/llm-design-kb/SKILL.md
+[llm-claims-kb]:
+  https://github.com/bukzor/bukzor-agent-skills/blob/main/llm-claims-kb/SKILL.md
