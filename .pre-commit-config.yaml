@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=https://json.schemastore.org/pre-commit-config.json
+
+repos:
+  # Project-specific hooks are local so dev tooling and pre-commit always match
+  - repo: local
+    hooks:
+      # Autofix lint first, then format (prettier has the last word)
+      - id: eslint
+        name: eslint
+        entry: bin/pnpm-run eslint --fix --no-warn-ignored
+        language: system
+        types_or: [javascript, jsx, ts, tsx]
+
+      # Prettier -- configured in .editorconfig, .prettierrc.json5
+      - id: prettier
+        name: prettier
+        entry: bin/pnpm-run prettier --write --ignore-unknown
+        language: system
+        types: [text]
+
+      # Whole-workspace typecheck, after formatting for cleaner output
+      - id: typecheck
+        name: typecheck
+        entry: bin/pnpm-run pnpm -r --if-present run typecheck
+        language: system
+        types_or: [ts, tsx, json]
+        pass_filenames: false
+
+  # Standard file hygiene hooks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: check-added-large-files
+      - id: check-case-conflict
+      - id: check-executables-have-shebangs
+      - id: check-json
+        exclude: tsconfig.*\.json$ # jsonc
+      - id: check-merge-conflict
+      - id: check-shebang-scripts-are-executable
+      - id: check-symlinks
+      - id: check-toml
+      - id: check-yaml
+      - id: detect-private-key
+      - id: end-of-file-fixer
+      - id: mixed-line-ending
+        args: [--fix=lf]
+      - id: trailing-whitespace
