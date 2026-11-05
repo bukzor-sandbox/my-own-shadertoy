@@ -18,7 +18,9 @@ commit is in; the first line without it is the next milestone.
 
 - **0.0** `bin/new-package` stamps a package. Landed.
 - **0.1** Adapter and device; log limits and features; handle device loss; show
-  uncaptured errors on the page. No canvas. `gpu/device-and-adapter`
+  uncaptured errors on the page. No canvas. The page is `apps/toy`, served by
+  Vite (the default; WebGPU needs a secure context, which localhost is).
+  `gpu/device-and-adapter`
 - **0.2** Canvas context; configure; clear via a render pass; resize.
   `gpu/canvas-surface`
 - **0.3** `requestAnimationFrame` loop with pause and single-step.
