@@ -1,0 +1,17 @@
+{
+  "name": "apps-bukzor-shadertoy",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": "./src/index.ts",
+  "scripts": {
+    "lint": "oxlint",
+    "fix": "oxlint --fix && oxfmt",
+    "format": "oxfmt",
+    "typecheck": "tsc -p .",
+    "dev": "vite"
+  },
+  "devDependencies": {
+    "vite": "^8.3.8"
+  }
+}
