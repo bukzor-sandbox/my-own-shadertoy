@@ -1,6 +1,6 @@
 ---
 label: GREEN_INCREMENT
-standing: agent
+standing: user
 why:
   - ../goals.kb/bite-sized-increments.md
 ---

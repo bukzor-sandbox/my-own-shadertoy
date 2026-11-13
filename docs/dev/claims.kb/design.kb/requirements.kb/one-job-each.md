@@ -1,6 +1,6 @@
 ---
 label: ONE_JOB
-standing: agent
+standing: user
 why:
   - ../goals.kb/legible-growth.md
 ---

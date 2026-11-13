@@ -1,6 +1,6 @@
 ---
 label: ARCHITECTURE
-standing: agent
+standing: user
 why:
   - requirements.md
 ontology:

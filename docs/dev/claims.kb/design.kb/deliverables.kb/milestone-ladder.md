@@ -1,6 +1,6 @@
 ---
 label: MILESTONE_LADDER
-standing: agent
+standing: user
 todo: true
 why:
   - ../goals.kb/api-coverage.md

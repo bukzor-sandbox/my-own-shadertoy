@@ -1,6 +1,6 @@
 ---
 label: DELIVERABLES
-standing: agent
+standing: user
 why:
   - architecture.md
   - goals.kb/bite-sized-increments.md

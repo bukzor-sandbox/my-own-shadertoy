@@ -1,6 +1,6 @@
 ---
 label: PASS_KIND_EXTENSION
-standing: agent
+standing: user
 todo: true
 why:
   - ../goals.kb/api-coverage.md

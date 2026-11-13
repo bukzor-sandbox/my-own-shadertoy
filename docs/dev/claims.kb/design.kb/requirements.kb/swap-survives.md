@@ -1,6 +1,6 @@
 ---
 label: SWAP_SURVIVES
-standing: agent
+standing: user
 why:
   - ../goals.kb/keep-apart-from-throwaway.md
 ---

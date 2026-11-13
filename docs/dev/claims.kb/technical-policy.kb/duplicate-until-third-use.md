@@ -1,6 +1,6 @@
 ---
 label: THIRD_USE
-standing: agent
+standing: user
 force: should
 why:
   - ../design.kb/goals.kb/legible-growth.md
