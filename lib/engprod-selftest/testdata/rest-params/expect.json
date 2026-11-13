@@ -1,0 +1,4 @@
+{
+  "why": "`arguments` is untyped, so spreading it slips any past the no-unsafe-* family; rest params keep the types",
+  "diagnostics": ["error eslint(prefer-rest-params) src/a.ts:2"]
+}

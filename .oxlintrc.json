@@ -16,6 +16,7 @@
     "no-console": "error",
     "object-shorthand": "error",
     "prefer-const": "error",
+    "prefer-rest-params": "error",
     "prefer-template": "error",
     "max-lines-per-function": [
       "error",
