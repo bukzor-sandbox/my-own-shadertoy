@@ -63,7 +63,13 @@ cat > "$dir/package.json" <<EOF
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "exports": "./src/index.ts"
+  "exports": "./src/index.ts",
+  "scripts": {
+    "lint": "oxlint",
+    "fix": "oxlint --fix && oxfmt",
+    "format": "oxfmt",
+    "typecheck": "tsc -p ."
+  }
 }
 EOF
 

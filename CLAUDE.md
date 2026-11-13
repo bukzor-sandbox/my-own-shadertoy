@@ -51,6 +51,9 @@ pre-commit run --all-files
 
 ## Commands
 
+At the root these cover the repo; in a package, `fix`, `lint`, `format`, and
+`typecheck` cover that package alone (`bin/new-package` stamps them).
+
 - `pnpm fix` -- oxlint --fix, then oxfmt
 - `pnpm lint` -- oxlint, no writes
 - `pnpm format` -- oxfmt (formatting and import sorting)
