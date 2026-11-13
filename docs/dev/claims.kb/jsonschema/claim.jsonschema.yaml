@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=https://json-schema.org/draft/2020-12/schema
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: my-own-shadertoy claim frontmatter
+description: The canonical claim schema, plus `author:`.
+$defs:
+  author:
+    description: >-
+      Who wrote the claim's wording, where that differs from who signs it.
+      `standing:` names the judge; this names the drafter, so a claim the agent
+      wrote and bukzor accepted reads `standing: user`, `author: agent`. Absent
+      means unrecorded.
+    enum: [agent, user]
+  base:
+    $anchor: base
+    $ref: "skill://llm-claims-kb/jsonschema/claim.jsonschema.yaml#base"
+    properties:
+      author:
+        $ref: "#/$defs/author"
+$ref: "#/$defs/base"
+unevaluatedProperties: false

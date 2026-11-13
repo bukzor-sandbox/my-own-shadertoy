@@ -1,6 +1,7 @@
 ---
 label: DEPENDENCY_DIRECTION
 standing: user
+author: agent
 todo: true
 why:
   - ../requirements.kb/swap-survives.md

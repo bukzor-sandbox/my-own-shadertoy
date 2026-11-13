@@ -1,6 +1,7 @@
 ---
 label: RECALL
 standing: user
+author: agent
 why:
   - ../goals.kb/learning-ownership.md
 ---

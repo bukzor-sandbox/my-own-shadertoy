@@ -1,6 +1,7 @@
 ---
 label: CONSOLIDATION
 standing: user
+author: agent
 force: should
 why:
   - ../design.kb/goals.kb/legible-growth.md

@@ -1,6 +1,7 @@
 ---
 label: DESIGN
 standing: user
+author: agent
 ontology:
   - mission
   - goals

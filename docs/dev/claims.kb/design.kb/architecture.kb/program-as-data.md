@@ -1,6 +1,7 @@
 ---
 label: PROGRAM_AS_DATA
 standing: user
+author: agent
 todo: true
 why:
   - ../requirements.kb/swap-survives.md

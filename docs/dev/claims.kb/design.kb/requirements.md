@@ -1,6 +1,7 @@
 ---
 label: REQUIREMENTS
 standing: user
+author: agent
 why:
   - goals.md
 ---

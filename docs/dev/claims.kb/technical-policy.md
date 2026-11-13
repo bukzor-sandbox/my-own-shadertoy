@@ -1,6 +1,7 @@
 ---
 label: POLICY
 standing: user
+author: agent
 why:
   - design.kb/goals.md
 non-claim-tokens:

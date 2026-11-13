@@ -1,6 +1,7 @@
 ---
 label: LEARNING_NOTES
 standing: user
+author: agent
 force: should
 todo: true
 why:
