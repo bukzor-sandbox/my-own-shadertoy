@@ -11,16 +11,25 @@ function requireWebGPU(): GPU {
   return navigator.gpu;
 }
 
+function* listProperties(
+  heading: string,
+  obj: object,
+): Iterable<Node | string> {
+  const h3 = document.createElement("h3");
+  h3.textContent = heading;
+  yield h3;
+  for (const key in obj) {
+    const val: unknown = Reflect.get(obj, key);
+    yield* [key, ": ", String(val), document.createElement("br")];
+  }
+}
+
 async function main(): Promise<void> {
   const gpu = requireWebGPU();
   const adapter = await gpu.requestAdapter();
   assert(adapter !== null, "failed getting adapter");
 
-  let key: keyof GPUAdapterInfo;
-  for (key in adapter.info) {
-    const val = adapter.info[key];
-    document.body.append(key, ": ", String(val), document.createElement("br"));
-  }
+  document.body.append(...listProperties("adapter.info", adapter.info));
 }
 
 void main();
