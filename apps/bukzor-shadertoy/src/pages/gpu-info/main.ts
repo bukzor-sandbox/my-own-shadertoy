@@ -1,5 +1,6 @@
-import { requireWebGPU, listObject } from "../../lib/device-and-adapter";
+import { requireWebGPU } from "../../lib/device-and-adapter";
 import { assert, showUncaughtErrors } from "../../lib/errors";
+import { listObject } from "../../lib/html-gen";
 
 showUncaughtErrors();
 
