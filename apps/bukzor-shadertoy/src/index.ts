@@ -1,6 +1,6 @@
-import { assert, reportUncaughtErrors } from "./errors";
+import { assert, showUncaughtErrors } from "./errors";
 
-reportUncaughtErrors();
+showUncaughtErrors();
 
 function requireWebGPU(): GPU {
   assert(
@@ -11,16 +11,32 @@ function requireWebGPU(): GPU {
   return navigator.gpu;
 }
 
-function* listProperties(
-  heading: string,
-  obj: object,
-): Iterable<Node | string> {
-  const h3 = document.createElement("h3");
-  h3.textContent = heading;
-  yield h3;
+function htmlTag<K extends keyof HTMLElementTagNameMap>(
+  tag: K,
+  ...children: (Node | string)[]
+): HTMLElementTagNameMap[K] {
+  const result = document.createElement(tag);
+  result.append(...children);
+  return result;
+}
+
+function* propertyLines(obj: object): Iterable<string> {
   for (const key in obj) {
-    const val: unknown = Reflect.get(obj, key);
-    yield* [key, ": ", String(val), document.createElement("br")];
+    yield `${key}: ${String(Reflect.get(obj, key))}`;
+  }
+}
+
+function* listObject(
+  name: string,
+  obj: object,
+  lines: Iterable<string> = propertyLines(obj),
+): Iterable<Node | string> {
+  yield htmlTag("h3", name);
+  yield htmlTag("i", "type: ", obj.constructor.name);
+  yield htmlTag("br");
+  yield htmlTag("br");
+  for (const line of lines) {
+    yield* [line, htmlTag("br")];
   }
 }
 
@@ -29,7 +45,11 @@ async function main(): Promise<void> {
   const adapter = await gpu.requestAdapter();
   assert(adapter !== null, "failed getting adapter");
 
-  document.body.append(...listProperties("adapter.info", adapter.info));
+  document.body.append(
+    ...listObject("adapter.info", adapter.info),
+    ...listObject("adapter.features", adapter.features, adapter.features),
+    ...listObject("adapter.limits", adapter.limits),
+  );
 }
 
 void main();

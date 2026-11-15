@@ -10,8 +10,7 @@ export function showError(error: unknown): void {
   document.body.append(pre);
 }
 
-/** Show every uncaught error and unhandled rejection on the page. */
-export function reportUncaughtErrors(): void {
+export function showUncaughtErrors(): void {
   window.addEventListener("error", (event) => {
     showError(event.error ?? event.message);
   });
