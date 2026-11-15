@@ -1,8 +1,6 @@
-import { assert, showUncaughtErrors } from "./errors";
+import { assert } from "./errors";
 
-showUncaughtErrors();
-
-function requireWebGPU(): GPU {
+export function requireWebGPU(): GPU {
   assert(
     window.isSecureContext,
     "WebGPU needs a secure context (https or localhost)",
@@ -26,7 +24,7 @@ function* propertyLines(obj: object): Iterable<string> {
   }
 }
 
-function* listObject(
+export function* listObject(
   name: string,
   obj: object,
   lines: Iterable<string> = propertyLines(obj),
@@ -39,17 +37,3 @@ function* listObject(
     yield* [line, htmlTag("br")];
   }
 }
-
-async function main(): Promise<void> {
-  const gpu = requireWebGPU();
-  const adapter = await gpu.requestAdapter();
-  assert(adapter !== null, "failed getting adapter");
-
-  document.body.append(
-    ...listObject("adapter.info", adapter.info),
-    ...listObject("adapter.features", adapter.features, adapter.features),
-    ...listObject("adapter.limits", adapter.limits),
-  );
-}
-
-void main();
