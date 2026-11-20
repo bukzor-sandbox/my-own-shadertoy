@@ -16,7 +16,8 @@ pnpm refuses an import a package has not declared, so the direction is enforced
 by each `package.json`.
 
 From milestone 1.2 on, WebGPU calls appear only in gpu and passes packages.
-TypeScript 7's DOM lib declares the WebGPU types, so every package can see them
-and no dependency scoping can hide them; the group `CLAUDE.md` files and review
-hold this line. Tripwire: the first WebGPU call found outside those groups adds
-a lint rule.
+TypeScript 7's DOM lib declares the WebGPU interfaces, so every package can see
+them and no dependency scoping can hide them; the group `CLAUDE.md` files and
+review hold this line. The flag constants (`GPUBufferUsage` and its siblings)
+come from `@webgpu/types`, which a workspace sees only by declaring it.
+Tripwire: the first WebGPU call found outside those groups adds a lint rule.

@@ -2,19 +2,28 @@
 label: WEBGPU_TYPES_PACKAGE
 standing: user
 author: agent
-todo: true
 why:
   - ../architecture.kb/dependency-direction.md
 ---
 
-# `@webgpu/types` replaces the DOM lib's WebGPU types once those lag
+# `@webgpu/types` supplies what the DOM lib's WebGPU types lack
 
-Tripwire: the first WebGPU API the code uses that TypeScript's DOM lib lacks or
-mistypes. Then add `@webgpu/types`, maintained by the WebGPU spec group, which
-tracks spec changes sooner than TypeScript releases do. It needs naming in the
-`types:` of `tsconfig.base.json`, which is empty, and `DEPENDENCY_DIRECTION`'s
-sentence on where the types come from changes with it.
+Each workspace that calls WebGPU lists `@webgpu/types` in its `devDependencies`
+and names it in the `types:` of its own `tsconfig.json`. The WebGPU spec group
+maintains it, so it tracks the spec sooner than TypeScript releases do. It adds
+what TypeScript's DOM lib lacks or mistypes, starting with the flag constants
+(`GPUBufferUsage`, `GPUTextureUsage`, `GPUShaderStage`, ...), which TypeScript
+7.0.2 declares only as `number` types. A workspace that doesn't declare the
+package lacks them, so a flag constant in `ui/` fails its typecheck.
+
+The base `tsconfig.base.json` keeps `types: []`: naming the package there would
+make it visible to every workspace whether or not that workspace declares it.
 
 > [!@bukzor] 1b724c86
 >
 > This deserves a note somewhere.
+
+> [!@bukzor] 4eef9346-7acb-4dc3-b420-793c767fa326
+>
+> Making it visible repo-wide is the wrong direction; it doesn't belong in the
+> base config.
