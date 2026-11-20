@@ -8,7 +8,7 @@ authority:
   address: fb592418
   words:
     One teeny-package per new thing sounds right, maybe? And I'd like to see
-    packagizing even for components of apps/toy.
+    packagizing even for components of apps/bukzor-shadertoy.
 ---
 
 # Each new thing is its own small package, named in full
