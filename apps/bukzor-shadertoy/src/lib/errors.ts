@@ -18,12 +18,16 @@ export interface ErrorLike {
 }
 
 // An Error's stack starts with its name and message. Other classes' names say
-// which kind of error: GPUValidationError, GPUOutOfMemoryError, ...
+// which kind of error: GPUValidationError, GPUOutOfMemoryError, ... An Error's
+// cause, if any, follows on its own line.
 function describeError(error: ErrorLike): string {
-  if (error instanceof Error && error.stack !== undefined) {
-    return error.stack;
+  if (!(error instanceof Error)) {
+    return `${error.constructor.name}: ${error.message}`;
   }
-  return `${error.constructor.name}: ${error.message}`;
+  const text = error.stack ?? `${error.name}: ${error.message}`;
+  return error.cause === undefined
+    ? text
+    : `${text}\nCaused by: ${describeUnknown(error.cause)}`;
 }
 
 export function showError(error: ErrorLike): void {

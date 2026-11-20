@@ -114,6 +114,9 @@ auto-remove them.
 - A `switch` over a union lists every member; a new member must fail loudly.
 - Import cycles are errors (dependencies stay a DAG).
 - Functions over 40 lines fail; `console` use fails.
+- Only `Error`s are thrown or rejected. Packages surface errors and never
+  display them; the app displays whatever reaches its global handlers
+  (`ERROR_HANDLING`, in `docs/dev/claims.kb/technical-policy.kb/`).
 
 [llm-design-kb]:
   https://github.com/bukzor/bukzor-agent-skills/blob/main/llm-design-kb/SKILL.md
