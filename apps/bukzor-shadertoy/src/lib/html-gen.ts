@@ -7,22 +7,36 @@ function htmlTag<K extends keyof HTMLElementTagNameMap>(
   return result;
 }
 
-function* propertyLines(obj: object): Iterable<string> {
+function* describeProperties(obj: object): Iterable<string> {
   for (const key in obj) {
     yield `${key}: ${String(Reflect.get(obj, key))}`;
   }
 }
 
-export function* listObject(
+function* describeSection(
   name: string,
-  obj: object,
-  lines: Iterable<string> = propertyLines(obj),
+  typeName: string,
+  lines: Iterable<string>,
 ): Iterable<Node | string> {
   yield htmlTag("h3", name);
-  yield htmlTag("i", "type: ", obj.constructor.name);
+  yield htmlTag("i", "type: ", typeName);
   yield htmlTag("br");
   yield htmlTag("br");
   for (const line of lines) {
     yield* [line, htmlTag("br")];
   }
+}
+
+export function describeObject(
+  name: string,
+  obj: object,
+): Iterable<Node | string> {
+  return describeSection(name, obj.constructor.name, describeProperties(obj));
+}
+
+export function describeSet(
+  name: string,
+  set: ReadonlySet<string>,
+): Iterable<Node | string> {
+  return describeSection(name, set.constructor.name, [...set].toSorted());
 }

@@ -1,23 +1,21 @@
 import { requireWebGPU } from "../../lib/device-and-adapter";
 import { assert, showUncaughtErrors } from "../../lib/errors";
-import { listObject } from "../../lib/html-gen";
+import { describeObject, describeSet } from "../../lib/html-gen";
 
 showUncaughtErrors();
+
+function* describeAdapter(adapter: GPUAdapter): Iterable<Node | string> {
+  yield* describeObject("adapter.info", adapter.info);
+  yield* describeSet("adapter.features", adapter.features);
+  yield* describeObject("adapter.limits", adapter.limits);
+}
 
 async function main(): Promise<void> {
   const gpu = requireWebGPU();
   const adapter = await gpu.requestAdapter();
   assert(adapter !== null, "failed getting adapter");
 
-  document.body.append(
-    ...listObject("adapter.info", adapter.info),
-    ...listObject(
-      "adapter.features",
-      adapter.features,
-      [...adapter.features].toSorted(),
-    ),
-    ...listObject("adapter.limits", adapter.limits),
-  );
+  document.body.append(...describeAdapter(adapter));
 }
 
 void main();
