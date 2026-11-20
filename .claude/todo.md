@@ -1,5 +1,14 @@
 # Todo
 
+- [x] Recall what df8e6e6 taught
+  - [x] Why `void main();` satisfies `no-floating-promises`: what the linter
+        fears is lost without it
+  - [x] Why a runtime `Symbol.iterator` check can't decide between
+        `describeObject` and `describeSet`
+  - [x] Where the order of `adapter.limits`' lines comes from, and why
+        `adapter.features` has none
+  - [x] Why `constructor.name` and `Symbol.toStringTag` agree on every WebGPU
+        object
 - [ ] Milestone 0.1, bukzor's (roadmap:
       `docs/dev/claims.kb/design.kb/deliverables.kb/milestone-ladder.md`)
   - [ ] Request a device; list `device.limits` and `device.features` beside the
