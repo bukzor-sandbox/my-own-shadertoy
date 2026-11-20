@@ -15,11 +15,11 @@ function* describeProperties(obj: object): Iterable<string> {
 
 function* describeSection(
   name: string,
-  typeName: string,
+  obj: object,
   lines: Iterable<string>,
 ): Iterable<Node | string> {
   yield htmlTag("h3", name);
-  yield htmlTag("i", "type: ", typeName);
+  yield htmlTag("i", "type: ", obj.constructor.name);
   yield htmlTag("br");
   yield htmlTag("br");
   for (const line of lines) {
@@ -27,16 +27,20 @@ function* describeSection(
   }
 }
 
+// An iterable's content is its members, not its properties: describe a set
+// with describeSet. Only the caller's static type knows which view is right.
+type NotIterable = object & { [Symbol.iterator]?: never };
+
 export function describeObject(
   name: string,
-  obj: object,
+  obj: NotIterable,
 ): Iterable<Node | string> {
-  return describeSection(name, obj.constructor.name, describeProperties(obj));
+  return describeSection(name, obj, describeProperties(obj));
 }
 
 export function describeSet(
   name: string,
   set: ReadonlySet<string>,
 ): Iterable<Node | string> {
-  return describeSection(name, set.constructor.name, [...set].toSorted());
+  return describeSection(name, set, [...set].toSorted());
 }
