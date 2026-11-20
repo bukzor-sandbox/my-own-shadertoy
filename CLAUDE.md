@@ -53,6 +53,14 @@ policy. Start at `docs/dev/claims.kb/design.md`. The roadmap is
 needs nothing installed; maintaining it follows [llm-design-kb] and
 [llm-claims-kb].
 
+## Current work
+
+`.claude/todo.md` is the one list of work remaining, including whatever the next
+session should pick up; maintaining it follows [llm-subtask]. A handoff is a
+reordered or annotated `todo.md`, never a file of its own.
+
+> [!@bukzor] 2026-11-20 -- next-session items go in `todo.md`, reliably.
+
 ## Setup
 
 ```bash
@@ -114,5 +122,7 @@ auto-remove them.
   https://github.com/bukzor/bukzor-agent-skills/blob/main/llm-design-kb/SKILL.md
 [llm-claims-kb]:
   https://github.com/bukzor/bukzor-agent-skills/blob/main/llm-claims-kb/SKILL.md
+[llm-subtask]:
+  https://github.com/bukzor/bukzor-agent-skills/blob/main/llm-subtask/SKILL.md
 [llm-must-read-kb]:
   https://github.com/bukzor/bukzor-agent-skills/blob/main/llm-must-read-kb/SKILL.md
