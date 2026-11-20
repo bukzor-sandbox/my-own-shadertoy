@@ -11,6 +11,9 @@ holds its claims.
   whose claims all need it.
 - A cross-cutting imperative goes in `../technical-policy.kb/`.
 - A package's one job goes in its README, never here.
+- A claim that binds an act to an occasion, a tripwire most often, also gets an
+  entry in `.claude/must-read.kb/` named for that occasion. A tripwire's entry
+  is deleted when its `todo:` is dropped.
 
 [llm-design-kb]:
   https://github.com/bukzor/bukzor-agent-skills/blob/main/llm-design-kb/SKILL.md

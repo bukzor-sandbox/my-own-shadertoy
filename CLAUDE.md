@@ -20,6 +20,18 @@ programming. A pnpm workspace (TypeScript 7, WebGPU), laid out like
   `typecheck` runs `tsc` in every workspace, and one without a tsconfig fails
   it.
 
+## Required reading: triggers
+
+Before your first tool call, list this repo's trigger bank:
+`ls -RF "$(git rev-parse --show-toplevel)/.claude/must-read.kb"`. Each path
+names an occasion (`before/`, `after/`, or `when/` it); when one arrives, read
+that entry and act on it, finishing a `before/` entry ahead of the action it
+names. Each entry serves a design-ledger claim that binds an act to an occasion,
+most often a tripwire. Conventions: [llm-must-read-kb].
+
+> [!@bukzor] 2026-11-15 -- adopt a project trigger bank for the ledger's
+> tripwires, with the nearby adjustments coherence needs.
+
 ## Who writes what
 
 This is a learning project, so the learning-bearing work is bukzor's.
@@ -102,3 +114,5 @@ auto-remove them.
   https://github.com/bukzor/bukzor-agent-skills/blob/main/llm-design-kb/SKILL.md
 [llm-claims-kb]:
   https://github.com/bukzor/bukzor-agent-skills/blob/main/llm-claims-kb/SKILL.md
+[llm-must-read-kb]:
+  https://github.com/bukzor/bukzor-agent-skills/blob/main/llm-must-read-kb/SKILL.md

@@ -20,4 +20,6 @@ The session:
 - merges code that now has three copies (`THIRD_USE`);
 - deletes or merges packages whose job statement no longer holds;
 - brings this ledger and the `CLAUDE.md` files back to what is true;
+- checks each tripwire against what happened since, and that its entry in
+  `.claude/must-read.kb/` still names its occasion;
 - runs the breadcrumb witness (`BREADCRUMBS`).
