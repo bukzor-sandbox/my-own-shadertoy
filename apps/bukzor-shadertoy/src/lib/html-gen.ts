@@ -1,4 +1,4 @@
-function htmlTag<K extends keyof HTMLElementTagNameMap>(
+export function htmlTag<K extends keyof HTMLElementTagNameMap>(
   tag: K,
   ...children: (Node | string)[]
 ): HTMLElementTagNameMap[K] {

@@ -1,5 +1,5 @@
 {
-  "name": "apps-bukzor-shadertoy",
+  "name": "@repo/apps-bukzor-shadertoy",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -9,6 +9,9 @@
     "format": "oxfmt",
     "typecheck": "tsc -p .",
     "dev": "vite"
+  },
+  "dependencies": {
+    "@repo/gpu-device": "workspace:^"
   },
   "devDependencies": {
     "@webgpu/types": "^0.1.74",

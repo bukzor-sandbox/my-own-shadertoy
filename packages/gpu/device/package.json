@@ -1,0 +1,13 @@
+{
+  "name": "@repo/gpu-device",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": "./src/index.ts",
+  "scripts": {
+    "lint": "oxlint",
+    "fix": "oxlint --fix && oxfmt",
+    "format": "oxfmt",
+    "typecheck": "tsc -p ."
+  }
+}

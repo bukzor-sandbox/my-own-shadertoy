@@ -2,7 +2,7 @@
 # Stamp a new workspace package: bin/new-package GROUP/THING 'its one job'
 #
 # GROUP is a lifetime group (a directory under packages/ holding a CLAUDE.md,
-# or `apps`). THING is a descriptive kebab-case phrase. The job statement is
+# or `apps`). THING names that one thing, in kebab-case. The job statement is
 # required: it becomes the README, so no package exists without one.
 #
 # The stamped src/index.ts is empty and fails lint (no-empty-file) until it
@@ -43,7 +43,7 @@ else
   dir="packages/$group/$thing"
   groupdir="packages/$group"
 fi
-name="$group-$thing"
+name="@repo/$group-$thing"
 
 if [[ ! -f "$groupdir/CLAUDE.md" ]]; then
   echo >&2 "no lifetime group at $groupdir (it needs a CLAUDE.md)"

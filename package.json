@@ -1,5 +1,5 @@
 {
-  "name": "my-own-shadertoy",
+  "name": "@repo/my-own-shadertoy",
   "version": "0.0.0",
   "private": true,
   "type": "module",

@@ -11,12 +11,13 @@ authority:
     packagizing even for components of apps/bukzor-shadertoy.
 ---
 
-# Each new thing is its own small package, named in full
+# Each new thing is its own small package, named for that one thing
 
 Every new thing gets its own package at `packages/<group>/<thing>`, `<thing>` a
-descriptive kebab-case phrase (`device-and-adapter`, not `device`). The package
-name is the path with the slash as a dash (`gpu-device-and-adapter`), so one
-grep finds both. Its README is the one-paragraph job statement.
+kebab-case name for that one thing, never for a phase or the group's whole
+subject (`device`, not `init` or `webgpu`). The package name is `@repo/` and the
+path with the slash as a dash (`@repo/gpu-device`), so one grep finds both. Its
+README is the one-paragraph job statement.
 
 `bin/new-package` stamps a package, and takes the job statement as an argument,
 so no package exists without one. The declined alternative was extracting a

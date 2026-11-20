@@ -1,3 +1,3 @@
-# apps-bukzor-shadertoy
+# @repo/apps-bukzor-shadertoy
 
 my own shadertoy
