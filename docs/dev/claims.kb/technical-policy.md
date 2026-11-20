@@ -5,7 +5,13 @@ author: agent
 why:
   - design.kb/goals.md
 non-claim-tokens:
+  - API
+  - CLAUDE
+  - MDN
   - RFC
+  - SKILL
+  - URL
+  - WGSL
 ---
 
 # my-own-shadertoy -- technical policy

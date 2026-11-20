@@ -9,8 +9,20 @@ ontology:
   - architecture
   - deliverables
 non-claim-tokens:
+  - API
+  - CI
+  - CLAUDE
+  - CPU
   - DAG
+  - DOM
   - GPGPU
+  - GPU
+  - JSON
+  - JSX
+  - PNG
+  - README
+  - SKILL
+  - UI
   - WGSL
 stale-when:
   a rung nothing cites and nothing fills, or package-level claims start
