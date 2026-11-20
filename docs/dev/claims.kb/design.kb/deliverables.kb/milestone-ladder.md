@@ -19,16 +19,16 @@ commit is in; the first line without it is the next milestone.
 
 - **0.0** `bin/new-package` stamps a package. Landed.
 - **0.1** Adapter and device; log limits and features; handle device loss; show
-  uncaptured errors on the page. No canvas. The page is `apps/toy`, served by
-  Vite (the default; WebGPU needs a secure context, which localhost is).
-  `gpu/device-and-adapter`
+  uncaptured errors on the page. No canvas. The page is `apps/bukzor-shadertoy`,
+  served by Vite (the default; WebGPU needs a secure context, which localhost
+  is). `gpu/device-and-adapter`
 - **0.2** Canvas context; configure; clear via a render pass; resize.
   `gpu/canvas-surface`
 - **0.3** `requestAnimationFrame` loop with pause and single-step.
   `gpu/frame-loop`
 - **1.1** A compute pass writes a storage texture; a fullscreen-triangle pass
-  blits it. Two pipelines, `layout: "auto"`, all hand-written in `apps/toy`.
-  Deliberately unpackaged: 1.2 extracts from it.
+  blits it. Two pipelines, `layout: "auto"`, all hand-written in
+  `apps/bukzor-shadertoy`. Deliberately unpackaged: 1.2 extracts from it.
 - **1.2** Extract the program model and runner from 1.1. `program/pass-graph`,
   `gpu/runner`, `passes/compute-to-storage-texture`,
   `passes/blit-fullscreen-triangle`
