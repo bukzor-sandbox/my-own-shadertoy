@@ -4,20 +4,51 @@ export function assert(cond: unknown, message: string): asserts cond {
   }
 }
 
-// String() suits Errors and plain values, but WebGPU's GPUError and
-// GPUDeviceLostInfo are not Errors: they print as "[object ...]", and their
-// text is in `.message`. An Error's stack is dropped too.
-export function showError(error: unknown): void {
+function showText(message: string): void {
   const pre = document.createElement("pre");
-  pre.textContent = String(error);
+  pre.classList.add("error");
+  pre.textContent = message;
   document.body.append(pre);
+}
+
+// What Error, GPUError, and GPUDeviceLostInfo have in common. An event is not
+// one: GPUUncapturedErrorEvent holds its GPUError in `.error`.
+export interface ErrorLike {
+  readonly message: string;
+}
+
+// An Error's stack starts with its name and message. Other classes' names say
+// which kind of error: GPUValidationError, GPUOutOfMemoryError, ...
+function describeError(error: ErrorLike): string {
+  if (error instanceof Error && error.stack !== undefined) {
+    return error.stack;
+  }
+  return `${error.constructor.name}: ${error.message}`;
+}
+
+export function showError(error: ErrorLike): void {
+  showText(describeError(error));
+}
+
+function isErrorLike(value: unknown): value is ErrorLike {
+  return (
+    typeof value === "object" &&
+    value !== null &&
+    "message" in value &&
+    typeof value.message === "string"
+  );
+}
+
+// Anything can be thrown or rejected; only some of it is ErrorLike.
+function describeUnknown(value: unknown): string {
+  return isErrorLike(value) ? describeError(value) : String(value);
 }
 
 export function showUncaughtErrors(): void {
   window.addEventListener("error", (event) => {
-    showError(event.error ?? event.message);
+    showText(describeUnknown(event.error ?? event.message));
   });
   window.addEventListener("unhandledrejection", (event) => {
-    showError(event.reason);
+    showText(describeUnknown(event.reason));
   });
 }
