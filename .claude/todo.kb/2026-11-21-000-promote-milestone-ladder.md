@@ -1,6 +1,6 @@
 ---
 managed-by: Skill(llm-subtask)
-status: open
+status: done
 ---
 
 # Promote the milestone ladder to one claim per milestone
@@ -21,7 +21,9 @@ who typed each.
 
 ## Implementation Steps
 
-Handoffs: `2026-11-21-000-promote-milestone-ladder.kb/`.
+Commits 974cc9b..04fa8cd. The handoffs were removed on closing;
+`git log -- .claude/todo.kb/2026-11-21-000-promote-milestone-ladder.kb/` has
+them.
 
 - [x] Wave 1:
       [the collection and its schema](2026-11-21-000-promote-milestone-ladder.kb/2026-11-21-000-collection-and-schema.md)
@@ -44,4 +46,4 @@ Handoffs: `2026-11-21-000-promote-milestone-ladder.kb/`.
 - [x] No "Landed." status marker remains; the roll-up does not enumerate
 - [x] `FIRST_INSTANCE` names its check (bukzor's confirmation at landing), and
       0.1's is done
-- [ ] bukzor is satisfied on review; then close per Skill(subagent-handoffs)
+- [x] bukzor is satisfied on review; then close per Skill(subagent-handoffs)
