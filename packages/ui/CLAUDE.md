@@ -8,6 +8,7 @@ authoring moves off TypeScript.
 - No WebGPU calls here: a panel that needs GPU data gets it from a gpu package's
   API.
 - bukzor writes the first instance of each kind of part (first panel, first
-  editor). After that, Claude may write freely here.
+  editor). After that, Claude may write freely here, except for first uses (root
+  `CLAUDE.md`, "Who writes what").
 - No UI framework; plain DOM.
 - New package: `bin/new-package ui/<thing> '<its one job>'`.

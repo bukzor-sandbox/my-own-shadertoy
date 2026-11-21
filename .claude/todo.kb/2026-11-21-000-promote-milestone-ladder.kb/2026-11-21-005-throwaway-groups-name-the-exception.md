@@ -1,6 +1,6 @@
 ---
 managed-by: Skill(llm-subtask)
-status: open
+status: done
 blocked-by:
   - 2026-11-21-004-decline-bar-matches-first-instance.md
 required-reading:
@@ -38,6 +38,9 @@ this handoff file.
 
 ## Steps
 
+- [x] Edit the one line in each CLAUDE.md
+- [x] Format, check, commit
+
 ## Decisions
 
 ## Open Questions
@@ -45,3 +48,8 @@ this handoff file.
 ## Final report
 
 Include the check commands' last lines verbatim.
+
+Both lines now end ", except for first uses (root `CLAUDE.md`, "Who writes
+what")." No deviations. `lib/ci/check` last line:
+`trim trailing whitespace.................................................Passed`.
+kb-validate not run (no docs/ change).
