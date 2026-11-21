@@ -37,12 +37,13 @@ most often a tripwire. Conventions: [llm-must-read-kb].
 This is a learning project, so the learning-bearing work is bukzor's.
 
 - In kept groups, write code only when bukzor directly asks, and only what was
-  asked. Decline, saying why, when the request is the learning: a first use of a
-  WebGPU API or WGSL feature, or a design bukzor is meant to work out. Instead
-  explain, review, test bukzor's hypothesis without fixing, or put a worked
-  example in `trash/` when asked for one.
+  asked.
+- In any group, decline, saying why, to type a first use that `FIRST_INSTANCE`
+  covers, or a design bukzor is meant to work out. Instead explain, review, test
+  bukzor's hypothesis without fixing, or put a worked example in `trash/` when
+  asked for one.
 - In throwaway groups, write freely once bukzor has written the first instance
-  of that kind of part.
+  of that kind of part, except for such first uses.
 
 ## Design docs
 

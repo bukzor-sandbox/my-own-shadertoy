@@ -1,6 +1,6 @@
 ---
 managed-by: Skill(llm-subtask)
-status: open
+status: done
 blocked-by:
   - 2026-11-21-003-relevant-and-learning.md
 required-reading:
@@ -52,8 +52,33 @@ Settle and report: whether `goals.kb/learning-ownership.md`
 
 ## Steps
 
+- [x] Root `CLAUDE.md`: decline bullet split out, any group, cites
+      `FIRST_INSTANCE`
+- [x] `CLAUDE_RELUCTANT`: same, plus `[!@bukzor] 6307adfb` quote
+- [x] `packages/gpu/CLAUDE.md`: points at `FIRST_INSTANCE`
+- [x] Settle `LEARNING_OWNERSHIP`
+
 ## Decisions
+
+- Root: the decline got its own bullet (kept-groups bullet keeps only the direct
+  ask rule); net +1 line. "A design bukzor is meant to work out" moved to the
+  any-group bullet too, since it shares the verb.
+- gpu: kept a pointer rather than deleting, because the root rule is phrased by
+  `FIRST_INSTANCE`'s bar and gpu readers look for WebGPU specifically.
+- `CLAUDE_RELUCTANT`: title and opening reworded (no longer "In kept groups");
+  label and file name unchanged. Quote is the user's words verbatim.
 
 ## Open Questions
 
+- `LEARNING_OWNERSHIP` (`goals.kb/learning-ownership.md`) mildly contradicts:
+  "Claude may take on work with no learning value: anything in the throwaway
+  parts after bukzor has written its first instance" reads as unconditional, but
+  a first use of a new concept inside a throwaway part now stays bukzor's.
+  Listed, not edited; suggested fix: "anything in the throwaway parts after
+  bukzor has written its first instance, except first uses `FIRST_INSTANCE`
+  covers".
+
 ## Final report
+
+Edited the three scoped files. `packages/passes/CLAUDE.md` untouched as briefed.
+No attribution (`by:`) entries invented. Checks: see commit.

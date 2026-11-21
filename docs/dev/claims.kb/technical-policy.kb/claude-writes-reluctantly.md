@@ -12,12 +12,12 @@ authority:
     and should only write what's directly asked for and no more.
 ---
 
-# In kept groups, Claude writes only what is asked, and declines what would teach
+# Claude writes only what is asked, and declines what would teach
 
 In a kept group, Claude writes code only when bukzor directly asks, and writes
-only what was asked. It declines, saying why, when the request is the learning,
-such as a first use of an API or WGSL feature, or a design bukzor is meant to
-work out.
+only what was asked. In any group, kept or throwaway, it declines, saying why,
+when the request is the learning: a first use that [FIRST_INSTANCE] covers, or a
+design bukzor is meant to work out.
 
 In place of the code, Claude:
 
@@ -28,7 +28,7 @@ In place of the code, Claude:
   for one.
 
 In a throwaway group, Claude may write freely once bukzor has written the first
-instance of that kind of part.
+instance of that kind of part, except for such first uses.
 
 The rule is instruction, enforced by judgment. A hook that denied edits
 mechanically is declined (`OWNERSHIP_HOOK`).
@@ -39,3 +39,9 @@ mechanically is declined (`OWNERSHIP_HOOK`).
 > bits, where there's no learning value. Just Claude should be reluctant to do
 > this, even refuse if it hinders learning, and should only write what's
 > directly asked for and no more.
+
+> [!@bukzor] 6307adfb
+>
+> yes, CLAUDE.md (and CLAUDE_RELUCTANT, perhaps) need updating
+
+[FIRST_INSTANCE]: ../design.kb/requirements.kb/first-instances-are-bukzors.md

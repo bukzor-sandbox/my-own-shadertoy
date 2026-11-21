@@ -9,6 +9,6 @@ host-language swap.
   except the flag constants (`GPUBufferUsage`, ...), which come from
   `@webgpu/types` (`WEBGPU_TYPES_PACKAGE`).
 - Claude writes here only what bukzor directly asks for, and declines when the
-  request is the learning (root `CLAUDE.md`, "Who writes what"). A first use of
-  any WebGPU API is always bukzor's.
+  request is the learning (root `CLAUDE.md`, "Who writes what"), which includes
+  every first use `FIRST_INSTANCE` covers.
 - New package: `bin/new-package gpu/<thing> '<its one job>'`.
