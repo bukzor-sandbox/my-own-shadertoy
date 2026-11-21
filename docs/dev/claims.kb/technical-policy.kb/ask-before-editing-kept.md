@@ -13,10 +13,13 @@ such edit a prompt bukzor sees. That is a speed bump, not a wall: it keeps
 judgment in charge and costs one settings entry.
 
 Settled by experience. Adopt if a session shows Claude writing more in a kept
-group than was asked; decline if a few sessions pass and the instruction alone
-holds.
+group than was asked. Each consolidation asks whether the instruction alone has
+held since the last; after a few that say it has, decline.
 
 > [!@bukzor] fb592418
 >
 > We _may_ want to impose "ask" permission on edits to files that are mostly
 > high-learning-value.
+
+> [!@bukzor] d02f4153 -- of when the decline branch is weighed: "at
+> consolidation sounds fine".

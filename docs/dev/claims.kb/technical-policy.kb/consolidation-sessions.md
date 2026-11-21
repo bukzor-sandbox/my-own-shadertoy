@@ -22,4 +22,6 @@ The session:
 - brings this ledger and the `CLAUDE.md` files back to what is true;
 - checks each tripwire against what happened since, and that its entry in
   `.claude/must-read.kb/` still names its occasion;
+- asks bukzor whether Claude wrote more in a kept group than asked since the
+  last one, which settles `ASK_BEFORE_EDITING_KEPT` over time;
 - runs the breadcrumb witness (`BREADCRUMBS`).
