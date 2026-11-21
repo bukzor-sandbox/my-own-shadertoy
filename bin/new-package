@@ -81,6 +81,6 @@ cat > "$dir/tsconfig.json" <<EOF
 EOF
 
 printf '# %s\n\n%s\n' "$name" "$job" > "$dir/README.md"
-echo 'export {};' > "$dir/src/index.ts"
+: > "$dir/src/index.ts"
 
 echo "$dir"
