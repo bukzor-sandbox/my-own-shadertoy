@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=https://json-schema.org/draft/2020-12/schema
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: milestone claim frontmatter
+description: >-
+  One claim per milestone: the local claim schema plus `first-uses:`. The
+  roll-up, `milestone-ladder.md`, states how milestone files are named and when
+  a milestone has landed.
+$ref: "../../jsonschema/claim.jsonschema.yaml#base"
+properties:
+  first-uses:
+    description: >-
+      The milestone's first uses in the codebase of a WebGPU API or WGSL
+      feature, and who typed each: the record `FIRST_INSTANCE` is checked
+      against. Filled when the milestone lands, `by:` given by bukzor. A
+      milestone with nothing recorded omits the key.
+    type: array
+    minItems: 1
+    items:
+      type: object
+      required: [use, by]
+      additionalProperties: false
+      properties:
+        use:
+          description: >-
+            The API or feature, as the code spells it (`device.lost`,
+            `@workgroup_size`).
+          type: string
+        by:
+          description: Who typed its first appearance.
+          enum: [bukzor, claude]
+unevaluatedProperties: false
