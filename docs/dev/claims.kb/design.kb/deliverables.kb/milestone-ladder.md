@@ -25,9 +25,10 @@ package names are first guesses, corrected at each milestone.
 - **Landed means the milestone's claim has no `todo: true`.** It drops the key
   when its commit is in. The next milestone is the first still carrying it:
   `grep -l '^todo: true' docs/dev/claims.kb/design.kb/deliverables.kb/milestone-ladder.kb/*.md | head -n1`.
-- **A landed milestone records its first uses** of WebGPU APIs and WGSL features
-  in `first-uses:`, each with the code that shows it (`evidence:`), for bukzor
-  to confirm at landing ([FIRST_INSTANCE]).
+- **A landed milestone records its first uses** of concepts relevant to the work
+  and new to bukzor in `first-uses:`, each with the code that shows it
+  (`evidence:`). Claude lists generously; bukzor strikes what wasn't learning
+  and confirms the rest at landing ([FIRST_INSTANCE]).
 
 Declined: a separately scheduled bind-group-layout refactor after multipass. The
 lesson arrives with the feature that forces it, so scheduling it apart is

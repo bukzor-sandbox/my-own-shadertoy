@@ -1,6 +1,6 @@
 ---
 managed-by: Skill(llm-subtask)
-status: open
+status: done
 blocked-by:
   - 2026-11-21-002-evidence-not-attribution.md
 required-reading:
@@ -54,8 +54,23 @@ handoff file.
 
 ## Steps
 
+- [x] FIRST_INSTANCE body and quote
+- [x] Schema description, roll-up rule, after/a-milestone-lands trigger
+- [x] 0.1: add window.isSecureContext (evidence verified at requireGPU); staged
+- [x] Format, validate, commit all but 0.1
+
 ## Decisions
+
+- The new quote reuses address 6307adfb as the brief directs; it sits before the
+  earlier 6307adfb quote.
+- Throwaway-part kinds stay in the body as a sentence of their own.
 
 ## Open Questions
 
+- None new. `CLAUDE_RELUCTANT` and root "Who writes what" are left as the brief
+  says.
+
 ## Final report
+
+Edits live in the six scoped files. 0.1 is staged, not committed. Check results
+are below.
