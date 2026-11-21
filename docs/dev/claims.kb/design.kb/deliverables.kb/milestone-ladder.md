@@ -24,7 +24,7 @@ package names are first guesses, corrected at each milestone.
   sub-milestones, so nothing renumbers.
 - **Landed means the milestone's claim has no `todo: true`.** It drops the key
   when its commit is in. The next milestone is the first still carrying it:
-  `grep -l '^todo: true' docs/dev/claims.kb/design.kb/deliverables.kb/milestone-ladder.kb/*.md | head -n1`.
+  `grep -l '^todo: true' docs/dev/claims.kb/design.kb/deliverables.kb/milestone-ladder.kb/*.md | sed -n 1p`.
 - **A landed milestone records its first uses** of concepts relevant to the work
   and new to bukzor in `first-uses:`, each with the code that shows it
   (`evidence:`). Claude lists generously; bukzor strikes what wasn't learning
