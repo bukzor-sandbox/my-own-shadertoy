@@ -33,7 +33,7 @@ Handoffs: `2026-11-21-000-promote-milestone-ladder.kb/`.
       [the bar is relevant and learning](2026-11-21-000-promote-milestone-ladder.kb/2026-11-21-003-relevant-and-learning.md)
 - [x] bukzor confirms 0.1's staged `first-uses:`
 - [x] Wave 5:
-- [ ] Wave 6:
+- [x] Wave 6:
       [throwaway groups name the first-use exception](2026-11-21-000-promote-milestone-ladder.kb/2026-11-21-005-throwaway-groups-name-the-exception.md)
       [Claude's decline bar matches FIRST_INSTANCE's](2026-11-21-000-promote-milestone-ladder.kb/2026-11-21-004-decline-bar-matches-first-instance.md)
 
