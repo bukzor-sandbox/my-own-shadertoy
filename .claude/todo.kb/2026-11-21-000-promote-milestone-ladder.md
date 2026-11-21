@@ -29,6 +29,8 @@ Handoffs: `2026-11-21-000-promote-milestone-ladder.kb/`.
       [the references that read the ladder](2026-11-21-000-promote-milestone-ladder.kb/2026-11-21-001-sweep-references.md)
 - [x] Wave 3:
       [first uses carry evidence, not attribution; recall names its artifact](2026-11-21-000-promote-milestone-ladder.kb/2026-11-21-002-evidence-not-attribution.md)
+- [ ] Wave 4:
+      [the bar is relevant and learning](2026-11-21-000-promote-milestone-ladder.kb/2026-11-21-003-relevant-and-learning.md)
 - [ ] bukzor confirms 0.1's staged `first-uses:`
 
 ## Success Criteria
