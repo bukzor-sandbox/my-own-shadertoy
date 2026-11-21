@@ -34,4 +34,10 @@ Declined: a separately scheduled bind-group-layout refactor after multipass. The
 lesson arrives with the feature that forces it, so scheduling it apart is
 planned debt.
 
+Conventions: [llm-design-kb] over [llm-claims-kb].
+
 [FIRST_INSTANCE]: ../requirements.kb/first-instances-are-bukzors.md
+[llm-design-kb]:
+  https://github.com/bukzor/bukzor-agent-skills/blob/main/llm-design-kb/SKILL.md
+[llm-claims-kb]:
+  https://github.com/bukzor/bukzor-agent-skills/blob/main/llm-claims-kb/SKILL.md
