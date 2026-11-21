@@ -4,7 +4,7 @@ standing: user
 author: agent
 todo: true
 why:
-  - milestone-ladder.md
+  - milestone-ladder.kb/01.1-hand-written-compute-and-blit.md
 ---
 
 # The WebGPU Inspector extension is installed when milestone 1.1 starts

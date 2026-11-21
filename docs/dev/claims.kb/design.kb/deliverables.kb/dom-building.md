@@ -4,7 +4,7 @@ standing: user
 author: agent
 todo: true
 why:
-  - milestone-ladder.md
+  - milestone-ladder.kb/02.2-shader-editor.md
   - ../architecture.kb/lifetime-groups.md
 ---
 

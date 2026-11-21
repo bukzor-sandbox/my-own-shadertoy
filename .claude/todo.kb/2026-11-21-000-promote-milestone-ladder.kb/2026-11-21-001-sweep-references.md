@@ -1,6 +1,6 @@
 ---
 managed-by: Skill(llm-subtask)
-status: open
+status: done
 blocked-by:
   - 2026-11-21-000-collection-and-schema.md
 required-reading:
@@ -58,8 +58,44 @@ handoff file.
 
 ## Steps
 
+- [x] `FIRST_INSTANCE`: write the check, run it
+- [x] `after/a-milestone-lands.md`: new occasion and act
+- [x] Root `CLAUDE.md`: the roadmap sentence
+- [x] Retarget the three `why:` entries
+- [x] `git grep` for other readers
+
 ## Decisions
+
+- `a-milestone-lands.md` keeps its filename: "a milestone lands" still names the
+  occasion. Its first act is the `first-uses:` listing, the second the tutorial
+  reading, each citing its ledger claim.
+- `WEBGPU_INSPECTOR` now names milestone 1.1 (its tripwire is 1.1 starting);
+  `DOM_BUILDING` names milestone 2.2 (its tripwire's one milestone).
+  `HELPER_LIBRARIES` keeps the roll-up: it cites 2.1, 7, and "nothing else
+  queued", so it depends on no one milestone.
+- The check uses `.[\"first-uses\"][]?`, so milestones without the key print
+  nothing. Run on the real collection: empty, exit 0 (no milestone records first
+  uses yet). Run on a scratch file with a `claude` and a `bukzor` entry: prints
+  only the `claude` one.
 
 ## Open Questions
 
+- 0.1 is landed but its `first-uses:` is unrecorded (unit 000 listed candidates
+  for bukzor to attribute), so the check is vacuously empty until bukzor gives
+  each `by:`. I left the entry out per the attribution rule.
+- Outside scope, not edited: `.claude/todo.md` line 15 ("Promote the milestone
+  ladder so `FIRST_INSTANCE` has a check") is now done by units 000-001; lines
+  17-18 and 19-20 refer to "the milestone ladder" and the roll-up path and stay
+  valid. `docs/dev/claims.kb/design.kb/deliverables.md:18` and `design.md:49,53`
+  say "the ladder" generically; still accurate. The parent plan's checklist is
+  the coordinator's.
+
 ## Final report
+
+Checks: `llm.kb-validate docs/dev/claims.kb`, `llm.kb-validate-links`, and
+`lib/ci/check`: all green (53 files, 0 errors; 54 links, 0 broken).
+
+Results live in: `CLAUDE.md` (roadmap sentence), `a-milestone-lands.md`,
+`first-instances-are-bukzors.md` (the check), and the `why:` of
+`webgpu-inspector.md` and `dom-building.md`; `helper-libraries.md` unchanged.
+Deviation: none. Unattributed: all 0.1 first uses (see Open Questions).
