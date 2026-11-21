@@ -25,7 +25,7 @@ Handoffs: `2026-11-21-000-promote-milestone-ladder.kb/`.
 
 - [x] Wave 1:
       [the collection and its schema](2026-11-21-000-promote-milestone-ladder.kb/2026-11-21-000-collection-and-schema.md)
-- [ ] Wave 2:
+- [x] Wave 2:
       [the references that read the ladder](2026-11-21-000-promote-milestone-ladder.kb/2026-11-21-001-sweep-references.md)
 - [ ] bukzor fills in 0.1's `first-uses:` from unit 000's list
 
