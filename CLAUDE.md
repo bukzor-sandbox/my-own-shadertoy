@@ -43,8 +43,6 @@ This is a learning project, so the learning-bearing work is bukzor's.
   example in `trash/` when asked for one.
 - In throwaway groups, write freely once bukzor has written the first instance
   of that kind of part.
-- Commit bukzor's sole work apart from your edits, without the `Co-Authored-By`
-  trailer (`FIRST_INSTANCE`).
 
 ## Design docs
 

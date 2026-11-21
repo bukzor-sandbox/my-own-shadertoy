@@ -14,13 +14,11 @@ authority:
 
 The first use in the codebase of each WebGPU API, each WGSL feature, and each
 kind of throwaway part (the first panel, the first editor hook-up) was written
-by bukzor. `git log` on the commit that introduced it is the check: bukzor's
-sole work is committed apart from Claude's edits and carries no
-`Co-Authored-By: Claude` trailer, so a commit without one holds nothing Claude
-wrote. That it is not a paste of Claude's output git cannot show; that half
-rests on bukzor.
+by bukzor. The check is open (`.claude/todo.md`). A commit's `Co-Authored-By`
+trailer cannot be it: the trailer means the commit is not bukzor's sole work,
+and bukzor's commits often carry a little of Claude's help.
 
 > [!@bukzor] 6307adfb
 >
-> Commit bukzor's sole work apart from your edits, without the `Co-Authored-By`
-> trailer (`FIRST_INSTANCE`).
+> It's going to be not-unusual for me to get a bit of help from claude, so "sole
+> work" is a high bar, yet the right bar for a "co-authored by" trailer.
