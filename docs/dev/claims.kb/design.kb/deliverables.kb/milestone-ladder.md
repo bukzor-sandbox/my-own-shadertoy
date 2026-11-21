@@ -14,9 +14,8 @@ The milestones are built in one linear order, one claim each in
 `milestone-ladder.kb/`. Each states what lands, then the packages it introduces;
 package names are first guesses, corrected at each milestone.
 
-> [!@bukzor] 6307adfb
->
-> promotion, imo
+> [!@bukzor] 6307adfb -- asked whether the ladder should stay one file or be
+> promoted to a collection of one claim per milestone: "promotion, imo".
 
 - **Order is the file name.** A milestone's file is its number, zero-padded so
   `ls` lists the ladder in order, then a slug for what it builds
