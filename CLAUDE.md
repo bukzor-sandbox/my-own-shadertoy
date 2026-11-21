@@ -87,11 +87,12 @@ dependencies.
 
 ## CI
 
-`lib/ci/check` is the whole of CI: pre-commit over every file. Run it at a
-terminal for CI's verdict. The workflow in `.github/workflows/` only sets up the
-environment (versions from `package.json`, `.envrc` via direnv) and then calls
-it. Since no lockfile is committed, a green CI run also proves a fresh clone
-resolves to a working toolchain.
+`lib/ci/check` is the whole of CI: pre-commit over every tracked file, so a new
+file is unchecked until `git add`ed. Run it at a terminal for CI's verdict. The
+workflow in `.github/workflows/` only sets up the environment (versions from
+`package.json`, `.envrc` via direnv) and then calls it. Since no lockfile is
+committed, a green CI run also proves a fresh clone resolves to a working
+toolchain.
 
 ## Toolchain
 
