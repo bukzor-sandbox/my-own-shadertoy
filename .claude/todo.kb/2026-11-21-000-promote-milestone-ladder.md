@@ -31,7 +31,9 @@ Handoffs: `2026-11-21-000-promote-milestone-ladder.kb/`.
       [first uses carry evidence, not attribution; recall names its artifact](2026-11-21-000-promote-milestone-ladder.kb/2026-11-21-002-evidence-not-attribution.md)
 - [x] Wave 4:
       [the bar is relevant and learning](2026-11-21-000-promote-milestone-ladder.kb/2026-11-21-003-relevant-and-learning.md)
-- [ ] bukzor confirms 0.1's staged `first-uses:`
+- [x] bukzor confirms 0.1's staged `first-uses:`
+- [ ] Wave 5:
+      [Claude's decline bar matches FIRST_INSTANCE's](2026-11-21-000-promote-milestone-ladder.kb/2026-11-21-004-decline-bar-matches-first-instance.md)
 
 ## Success Criteria
 

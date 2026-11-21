@@ -10,11 +10,6 @@
   - [ ] What `preventDefault()` on an `uncapturederror` event cancels, and what
         it leaves alone (evidence: `packages/gpu/device/src/index.ts:init`)
   - [ ] Why the page's stack line numbers differ from the devtools console's
-- [ ] Rule on `ERROR_HANDLING`, agent-signed in 4a3d8ad
-      (`docs/dev/claims.kb/technical-policy.kb/error-handling.md`)
-- [ ] Confirm 0.1's first uses, from the list in
-      `.claude/todo.kb/2026-11-21-000-promote-milestone-ladder.kb/2026-11-21-000-collection-and-schema.md`,
-      then close that plan.
 - [ ] Suggestion (Claude's, after 0.1 landed): skim webgpufundamentals.org's
       table of contents once, against the milestone ladder (`TUTORIAL_READING`).
 - [ ] Milestone 0.2, bukzor's (roadmap:
