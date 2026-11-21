@@ -13,6 +13,18 @@
   - [ ] Why the page's stack line numbers differ from the devtools console's
 - [ ] Suggestion (Claude's, after 0.1 landed): skim webgpufundamentals.org's
       table of contents once, against the milestone ladder (`TUTORIAL_READING`).
+- [ ] Rule on what the second-opinion consolidation (2026-11-21) left open:
+  - [ ] `BREADCRUMBS`: may an ancestor's `CLAUDE.md` be a collection's
+        breadcrumb? `design.kb/`'s five sub-collections rely on that today.
+  - [ ] The WGSL decision below is bound to "before milestone 1.1", but no
+        trigger names it: `before/starting-milestone-1.1.md` serves only
+        `WEBGPU_INSPECTOR`.
+  - [ ] `ASK_BEFORE_EDITING_KEPT`'s decline branch ("a few sessions pass and the
+        instruction alone holds") has no occasion; settle it at each
+        consolidation?
+  - [ ] A selftest case for `only-throw-error` and
+        `prefer-promise-reject-errors`, which the lint stance asserts.
+  - [ ] A root `README.md`, for a visitor arriving cold (`LEGIBLE_GROWTH`).
 - [ ] Milestone 0.2, bukzor's (roadmap:
       `docs/dev/claims.kb/design.kb/deliverables.kb/milestone-ladder.md`)
 - [ ] Decide how WGSL sources are typed and loaded, before milestone 1.1.
