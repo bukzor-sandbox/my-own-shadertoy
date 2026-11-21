@@ -33,14 +33,15 @@ Handoffs: `2026-11-21-000-promote-milestone-ladder.kb/`.
       [the bar is relevant and learning](2026-11-21-000-promote-milestone-ladder.kb/2026-11-21-003-relevant-and-learning.md)
 - [x] bukzor confirms 0.1's staged `first-uses:`
 - [x] Wave 5:
+      [Claude's decline bar matches FIRST_INSTANCE's](2026-11-21-000-promote-milestone-ladder.kb/2026-11-21-004-decline-bar-matches-first-instance.md)
 - [x] Wave 6:
       [throwaway groups name the first-use exception](2026-11-21-000-promote-milestone-ladder.kb/2026-11-21-005-throwaway-groups-name-the-exception.md)
-      [Claude's decline bar matches FIRST_INSTANCE's](2026-11-21-000-promote-milestone-ladder.kb/2026-11-21-004-decline-bar-matches-first-instance.md)
 
 ## Success Criteria
 
-- [ ] `llm.kb-validate docs/dev/claims.kb` and `llm.kb-validate-links` are clean
-- [ ] `lib/ci/check` is green
-- [ ] No "Landed." status marker remains; the roll-up does not enumerate
-- [ ] `FIRST_INSTANCE` names a runnable check, and it runs
+- [x] `llm.kb-validate docs/dev/claims.kb` and `llm.kb-validate-links` are clean
+- [x] `lib/ci/check` is green
+- [x] No "Landed." status marker remains; the roll-up does not enumerate
+- [x] `FIRST_INSTANCE` names its check (bukzor's confirmation at landing), and
+      0.1's is done
 - [ ] bukzor is satisfied on review; then close per Skill(subagent-handoffs)
