@@ -27,7 +27,7 @@ Handoffs: `2026-11-21-000-promote-milestone-ladder.kb/`.
       [the collection and its schema](2026-11-21-000-promote-milestone-ladder.kb/2026-11-21-000-collection-and-schema.md)
 - [x] Wave 2:
       [the references that read the ladder](2026-11-21-000-promote-milestone-ladder.kb/2026-11-21-001-sweep-references.md)
-- [ ] Wave 3:
+- [x] Wave 3:
       [first uses carry evidence, not attribution; recall names its artifact](2026-11-21-000-promote-milestone-ladder.kb/2026-11-21-002-evidence-not-attribution.md)
 - [ ] bukzor confirms 0.1's staged `first-uses:`
 
