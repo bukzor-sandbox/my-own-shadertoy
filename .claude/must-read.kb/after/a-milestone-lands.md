@@ -3,8 +3,8 @@
 A milestone's claim in `milestone-ladder.kb/` has just dropped `todo: true`.
 
 1. List the milestone's first uses of WebGPU APIs and WGSL features from its
-   diff into its `first-uses:` (`md-frontmatter-set` is the writer), and ask
-   bukzor for each `by:`. Never guess it. Ledger: [FIRST_INSTANCE].
+   diff into its `first-uses:`, each with `evidence:`, and ask bukzor to confirm
+   the list. Ledger: [FIRST_INSTANCE].
 2. Point bukzor at the webgpufundamentals.org articles on that milestone's
    topics, to compare with what bukzor wrote. After 0.1, the first, suggest one
    skim of the site's table of contents instead. Ledger: [TUTORIAL_READING].

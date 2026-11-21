@@ -1,6 +1,6 @@
 ---
 managed-by: Skill(llm-subtask)
-status: open
+status: done
 blocked-by:
   - 2026-11-21-001-sweep-references.md
 required-reading:
@@ -86,8 +86,39 @@ open.
 
 ## Steps
 
+- [x] Schema and roll-up: `{use, evidence}`, `by` gone
+- [x] `FIRST_INSTANCE` check; `after/a-milestone-lands.md`
+- [x] `UNDERSTANDING_HAS_A_HOME` (renamed in place); delete the two webgpu-note
+      entries; `before/ending-a-session.md`
+- [x] `.claude/todo.md`
+- [x] 0.1's `first-uses:`, staged only
+- [x] Checks, commit
+
 ## Decisions
+
+- Evidence is per use, one entry per function where the use appears (`init`,
+  `requireGPU`, `describeAdapter`, ...). Types (`GPUError`, `GPUDeviceLostInfo`)
+  point at the class whose field or constructor names them.
+- 0.1's `uncapturederror` replaces unit 000's
+  `device.addEventListener("uncapturederror", ...)`: the use is the event, and
+  the call is the same as any listener.
+- Dropped `window.isSecureContext` (unit 000's "borderline, not WebGPU itself").
+- The `[violation]` link in `first-instances-are-bukzors.md` points at the
+  trigger entry in `.claude/`, outside `docs/`; `llm.kb-validate-links` accepts
+  it.
+- `UNDERSTANDING_HAS_A_HOME` carries both of bukzor's quotes as two `[!@bukzor]`
+  blocks, sensatim, address 6307adfb.
 
 ## Open Questions
 
+- bukzor confirms 0.1's staged `first-uses:` (the one uncommitted path), then
+  commits it and closes the plan.
+
 ## Final report
+
+Checks: `llm.kb-validate docs/dev/claims.kb` (53 files, 0 errors),
+`llm.kb-validate-links` (0 broken), `lib/ci/check` (green).
+
+Deviations: none. Left staged, uncommitted:
+`milestone-ladder.kb/00.1-adapter-and-device.md`. Everything else is committed;
+`error-handling.md` untouched.

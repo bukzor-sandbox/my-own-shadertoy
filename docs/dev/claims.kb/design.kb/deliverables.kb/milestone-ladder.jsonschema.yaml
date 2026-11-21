@@ -10,14 +10,14 @@ properties:
   first-uses:
     description: >-
       The milestone's first uses in the codebase of a WebGPU API or WGSL
-      feature, and who typed each: the record `FIRST_INSTANCE` is checked
-      against. Filled when the milestone lands, `by:` given by bukzor. A
-      milestone with nothing recorded omits the key.
+      feature: the record `FIRST_INSTANCE` is confirmed against. Filled when the
+      milestone lands. Listing a use means bukzor confirmed at landing that
+      bukzor typed it. A milestone with nothing recorded omits the key.
     type: array
     minItems: 1
     items:
       type: object
-      required: [use, by]
+      required: [use, evidence]
       additionalProperties: false
       properties:
         use:
@@ -25,7 +25,13 @@ properties:
             The API or feature, as the code spells it (`device.lost`,
             `@workgroup_size`).
           type: string
-        by:
-          description: Who typed its first appearance.
-          enum: [bukzor, claude]
+        evidence:
+          description: >-
+            Where the use lives, each as `path:funcname`
+            (`packages/gpu/device/src/index.ts:init`): stable across edits,
+            greppable.
+          type: array
+          minItems: 1
+          items:
+            type: string
 unevaluatedProperties: false

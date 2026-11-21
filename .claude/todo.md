@@ -1,18 +1,18 @@
 # Todo
 
-- [ ] Recall what 4a3d8ad and c32ceab taught. Offered: the answers can become
-      the first `docs/webgpu.kb/` note, on how GPU errors escalate
-      (`LEARNING_NOTES`).
+- [ ] Recall what 4a3d8ad and c32ceab taught.
   - [ ] Why an uncaptured GPU error never reaches `window`'s `error` handler
-        unless something rethrows it
+        unless something rethrows it (evidence:
+        `packages/gpu/device/src/index.ts:init`)
   - [ ] Why a throw inside a `void`-discarded `device.lost.then(...)` gave
         callers no way to catch it, and how returning `lost` fixes that
+        (evidence: `packages/gpu/device/src/index.ts:init`)
   - [ ] What `preventDefault()` on an `uncapturederror` event cancels, and what
-        it leaves alone
+        it leaves alone (evidence: `packages/gpu/device/src/index.ts:init`)
   - [ ] Why the page's stack line numbers differ from the devtools console's
 - [ ] Rule on `ERROR_HANDLING`, agent-signed in 4a3d8ad
       (`docs/dev/claims.kb/technical-policy.kb/error-handling.md`)
-- [ ] Give each 0.1 first use its `by:`, from the list in
+- [ ] Confirm 0.1's first uses, from the list in
       `.claude/todo.kb/2026-11-21-000-promote-milestone-ladder.kb/2026-11-21-000-collection-and-schema.md`,
       then close that plan.
 - [ ] Suggestion (Claude's, after 0.1 landed): skim webgpufundamentals.org's

@@ -26,7 +26,8 @@ package names are first guesses, corrected at each milestone.
   when its commit is in. The next milestone is the first still carrying it:
   `grep -l '^todo: true' docs/dev/claims.kb/design.kb/deliverables.kb/milestone-ladder.kb/*.md | head -n1`.
 - **A landed milestone records its first uses** of WebGPU APIs and WGSL features
-  in `first-uses:`, each with who typed it, so [FIRST_INSTANCE] can be checked.
+  in `first-uses:`, each with the code that shows it (`evidence:`), for bukzor
+  to confirm at landing ([FIRST_INSTANCE]).
 
 Declined: a separately scheduled bind-group-layout refactor after multipass. The
 lesson arrives with the feature that forces it, so scheduling it apart is
