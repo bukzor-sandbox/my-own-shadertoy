@@ -5,7 +5,7 @@ author: agent
 why:
   - ../goals.kb/api-coverage.md
   - ../goals.kb/bite-sized-increments.md
-  - ../architecture.kb/one-package-per-thing.md
+  - ../architecture.kb/one-thing-per-package.md
 ---
 
 # The milestone ladder

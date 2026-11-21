@@ -1,5 +1,5 @@
 ---
-label: ONE_PACKAGE_PER_THING
+label: ONE_THING_PER_PACKAGE
 standing: user
 why:
   - ../requirements.kb/one-job-each.md
