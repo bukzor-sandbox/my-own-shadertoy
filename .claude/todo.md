@@ -1,16 +1,17 @@
 # Todo
 
 - [ ] Recall what 4a3d8ad and c32ceab taught.
-  - [ ] Why an uncaptured GPU error never reaches `window`'s `error` handler
+  - [x] Why an uncaptured GPU error never reaches `window`'s `error` handler
         unless something rethrows it (evidence:
         `packages/gpu/device/src/index.ts:requestDevice`)
-  - [ ] Why a throw inside a `void`-discarded `device.lost.then(...)` gave
+  - [x] Why a throw inside a `void`-discarded `device.lost.then(...)` gave
         callers no way to catch it, and how returning `lost` fixes that
         (evidence: `packages/gpu/device/src/index.ts:requestDevice`)
-  - [ ] What `preventDefault()` on an `uncapturederror` event cancels, and what
-        it leaves alone (evidence:
+  - [ ] What `preventDefault()` on an `uncapturederror` event cancels, how that
+        differs from `stopPropagation()`, and whether other listeners still run
+        and the rethrown error still reaches the console (evidence:
         `packages/gpu/device/src/index.ts:requestDevice`)
-  - [ ] Why the page's stack line numbers differ from the devtools console's
+  - [x] Why the page's stack line numbers differ from the devtools console's
 - [ ] Suggestion (Claude's, after 0.1 landed): skim webgpufundamentals.org's
       table of contents once, against the milestone ladder (`TUTORIAL_READING`).
 - [ ] Rule on what the second-opinion consolidation (2026-11-21) left open:
