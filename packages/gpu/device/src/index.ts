@@ -33,11 +33,14 @@ export function requireGPU(): GPU {
   return navigator.gpu;
 }
 
-export async function init() {
-  const gpu = requireGPU();
-  const adapter = await gpu.requestAdapter();
+export async function requestAdapter(): Promise<GPUAdapter> {
+  const adapter = await requireGPU().requestAdapter();
   assert(adapter !== null, "failed getting adapter");
+  return adapter;
+}
 
+export async function requestDevice(adapter?: GPUAdapter) {
+  adapter ??= await requestAdapter();
   const device = await adapter.requestDevice();
   device.addEventListener("uncapturederror", (event) => {
     // The throw below reaches the console; this cancels the browser's own
@@ -50,8 +53,6 @@ export async function init() {
   });
 
   return {
-    gpu,
-    adapter,
     device,
     lost, // rejects with DeviceLostError
   };

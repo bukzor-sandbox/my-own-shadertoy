@@ -1,4 +1,4 @@
-import * as gpuDevice from "@repo/gpu-device";
+import { requestAdapter, requestDevice } from "@repo/gpu-device";
 
 import { showUncaughtErrors } from "../../lib/errors";
 import { describeObject, describeSet, htmlTag } from "../../lib/html-gen";
@@ -61,12 +61,13 @@ function provokeDeviceLoss(device: GPUDevice): void {
 }
 
 async function main(): Promise<void> {
-  const webgpu = await gpuDevice.init();
+  const adapter = await requestAdapter();
+  const { device } = await requestDevice(adapter);
 
-  document.body.append(...describeAdapter(webgpu.adapter));
-  document.body.append(...describeDevice(webgpu.device));
-  await provokeUncapturedError(webgpu.device);
-  provokeDeviceLoss(webgpu.device);
+  document.body.append(...describeAdapter(adapter));
+  document.body.append(...describeDevice(device));
+  await provokeUncapturedError(device);
+  provokeDeviceLoss(device);
 }
 
 void main();

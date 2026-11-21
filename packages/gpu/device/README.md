@@ -1,3 +1,3 @@
 # @repo/gpu-device
 
-idiomatic getter for a WebGPU device
+requests a WebGPU device, and escalates its errors to thrown `Error`s

@@ -30,8 +30,8 @@ properties:
         evidence:
           description: >-
             Where the use lives, each as `path:funcname`
-            (`packages/gpu/device/src/index.ts:init`): stable across edits,
-            greppable.
+            (`packages/gpu/device/src/index.ts:requestDevice`): stable across
+            edits, greppable.
           type: array
           minItems: 1
           items:
