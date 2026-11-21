@@ -1,6 +1,6 @@
 ---
 label: ERROR_HANDLING
-standing: agent
+standing: user
 author: agent
 force: should
 why:
