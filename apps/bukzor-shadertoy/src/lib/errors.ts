@@ -7,7 +7,7 @@ function showText(message: string): void {
 
 // What Error, GPUError, and GPUDeviceLostInfo have in common. An event is not
 // one: GPUUncapturedErrorEvent holds its GPUError in `.error`.
-export interface ErrorLike {
+interface ErrorLike {
   readonly message: string;
 }
 
@@ -22,10 +22,6 @@ function describeError(error: ErrorLike): string {
   return error.cause === undefined
     ? text
     : `${text}\nCaused by: ${describeUnknown(error.cause)}`;
-}
-
-export function showError(error: ErrorLike): void {
-  showText(describeError(error));
 }
 
 function isErrorLike(value: unknown): value is ErrorLike {
