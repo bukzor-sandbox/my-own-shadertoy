@@ -1,0 +1,4 @@
+{
+  "why": "only Errors are rejected: a rejected string has no stack",
+  "diagnostics": ["error typescript(prefer-promise-reject-errors) src/a.ts:2"]
+}

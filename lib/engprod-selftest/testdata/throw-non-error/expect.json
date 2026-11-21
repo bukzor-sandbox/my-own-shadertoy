@@ -1,0 +1,4 @@
+{
+  "why": "only Errors are thrown: a thrown string has no stack",
+  "diagnostics": ["error typescript(only-throw-error) src/a.ts:2"]
+}
