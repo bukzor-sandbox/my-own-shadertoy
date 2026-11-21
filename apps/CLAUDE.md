@@ -1,7 +1,8 @@
 # apps -- throwaway; Claude may write after the first instance
 
-Deployable wiring: an app composes packages into a page and holds nothing else.
-Anything worth naming moves into a package.
+Deployable wiring: an app composes packages into pages. Its own helpers may live
+in `src/lib/`; one moves to a package when another workspace needs it, or when
+it would outlive the swap.
 
 - May depend on any package.
 - Exception: milestone 1.1 is hand-written here, unpackaged, by bukzor;
