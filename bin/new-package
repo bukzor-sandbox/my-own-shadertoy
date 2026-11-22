@@ -83,4 +83,5 @@ EOF
 printf '# %s\n\n%s\n' "$name" "$job" > "$dir/README.md"
 : > "$dir/src/index.ts"
 
+git add "$dir"
 echo "$dir"
