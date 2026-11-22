@@ -11,6 +11,7 @@
     "dev": "vite"
   },
   "dependencies": {
+    "@repo/gpu-canvas-surface": "workspace:^",
     "@repo/gpu-device": "workspace:^"
   },
   "devDependencies": {
