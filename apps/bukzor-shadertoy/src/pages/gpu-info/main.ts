@@ -3,8 +3,6 @@ import { requestAdapter, requestDevice } from "@repo/gpu-device";
 import { showUncaughtErrors } from "../../lib/errors";
 import { describeObject, describeSet, htmlTag } from "../../lib/html-gen";
 
-showUncaughtErrors();
-
 function* describeAdapter(adapter: GPUAdapter): Iterable<Node | string> {
   yield* describeObject("adapter.info", adapter.info);
   yield* describeSet("adapter.features", adapter.features);
@@ -61,6 +59,8 @@ function provokeDeviceLoss(device: GPUDevice): void {
 }
 
 async function main(): Promise<void> {
+  showUncaughtErrors();
+
   const adapter = await requestAdapter();
   const { device } = await requestDevice(adapter);
 
