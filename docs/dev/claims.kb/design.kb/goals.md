@@ -12,10 +12,3 @@ authority:
 
 How the mission is accomplished: five stances, one per file in `goals.kb/`. Each
 traces to bukzor's opening message or a later ruling in the design session.
-
-Conventions: [llm-design-kb] over [llm-claims-kb].
-
-[llm-design-kb]:
-  https://github.com/bukzor/bukzor-agent-skills/blob/main/llm-design-kb/SKILL.md
-[llm-claims-kb]:
-  https://github.com/bukzor/bukzor-agent-skills/blob/main/llm-claims-kb/SKILL.md
