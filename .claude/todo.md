@@ -1,19 +1,22 @@
 # Todo
 
-- [ ] Recall (missed cold on 2026-11-21): what `preventDefault()` on an
+- [x] Recall (missed cold on 2026-11-21): what `preventDefault()` on an
       `uncapturederror` event cancels, how that differs from
       `stopPropagation()`, and whether other listeners still run and the
       rethrown error still reaches the console (evidence:
-      `packages/gpu/device/src/index.ts:requestDevice`)
+      `packages/gpu/device/src/index.ts:requestDevice`). Closed 2026-11-23 by
+      bukzor, not cold.
 - [x] Suggestion (Claude's, after 0.1 landed): skim webgpufundamentals.org's
       table of contents once, against the milestone ladder (`TUTORIAL_READING`).
-- [ ] Recall (0.2): clear a canvas: this frame's texture, a command encoder, a
+- [x] Recall (0.2): clear a canvas: this frame's texture, a command encoder, a
       render pass whose one color attachment clears and stores, then end,
       finish, submit; and what each of `loadOp` and `storeOp` decides (evidence:
-      `apps/bukzor-shadertoy/src/pages/canvas/main.ts:main`)
-- [ ] Recall (0.2): configure a canvas context with only what has no default,
+      `apps/bukzor-shadertoy/src/pages/canvas/main.ts:main`). Closed 2026-11-23
+      by bukzor, not cold.
+- [x] Recall (0.2): configure a canvas context with only what has no default,
       and why its texture is fetched after `configure()` and again each frame
-      (evidence: `packages/gpu/canvas-surface/src/index.ts:getCanvasContext`)
+      (evidence: `packages/gpu/canvas-surface/src/index.ts:getCanvasContext`).
+      Closed 2026-11-23 by bukzor, not cold.
 - [ ] Suggestion (Claude's, after 0.2 landed): read webgpufundamentals.org's
       "WebGPU Fundamentals" lesson against 0.2's code (`TUTORIAL_READING`).
 - [ ] bukzor's call: should `WEBGPU_TYPES_PACKAGE` name a second gap in the DOM
