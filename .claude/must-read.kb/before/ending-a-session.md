@@ -5,11 +5,8 @@ context is running out.
 
 - Leave the increment green and committed, or say plainly that it is not
   ([GREEN_INCREMENT]).
-- Add an unchecked recall item to `.claude/todo.md` for each thing this session
-  taught that bukzor should be able to write from memory, or none if it taught
-  nothing new ([RECALL]). Each new item names its artifact (code or doc in
-  version control that holds the understanding); one with none to name is the
-  occasion to write one ([UNDERSTANDING_HAS_A_HOME]).
+- Add this session's recall items to `.claude/todo.md` ([RECALL]), each naming
+  its artifact, or writing one where none exists ([UNDERSTANDING_HAS_A_HOME]).
 
 [GREEN_INCREMENT]:
   ../../../docs/dev/claims.kb/design.kb/requirements.kb/green-commit-per-increment.md
