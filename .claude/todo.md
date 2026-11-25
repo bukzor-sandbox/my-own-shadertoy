@@ -19,9 +19,6 @@
       Closed 2026-11-23 by bukzor, not cold.
 - [ ] Suggestion (Claude's, after 0.2 landed): read webgpufundamentals.org's
       "WebGPU Fundamentals" lesson against 0.2's code (`TUTORIAL_READING`).
-- [ ] bukzor's call: should `WEBGPU_TYPES_PACKAGE` name a second gap in the DOM
-      lib, the `getContext("webgpu")` overload? Without `@webgpu/types` it
-      returns `RenderingContext` and `configure` fails TS2339.
 - [ ] Fill `docs/dev/claims.kb/dev-process-design.kb/`, rung by rung, bukzor
       ruling each.
 - [ ] Bring the root `CLAUDE.md`'s "Who writes what" to `ONE_HOME`: it restates
