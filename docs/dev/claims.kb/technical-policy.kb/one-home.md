@@ -16,9 +16,10 @@ authority:
 
 # Each conclusion, and the reasoning for it, has one home
 
-Everything else links to it, and a consequence practice missed is written where
-it is used, citing its premises. This repo adopts the fleet's [ONE_HOME] and
-[DERIVED_RECORD], which were extracted from the rulings below.
+Everything else links to it, and a consequence an occasion needs, which its
+reader there will not derive, is written at that occasion, citing its premises.
+This repo adopts the fleet's [ONE_HOME] and [DERIVED_RECORD], which were
+extracted from the rulings below.
 
 > [!@bukzor] 59b55f01
 >
@@ -32,4 +33,4 @@ it is used, citing its premises. This repo adopts the fleet's [ONE_HOME] and
 [ONE_HOME]:
   https://github.com/bukzor/bukzor-agent-skills/blob/main/docs/dev/claims.kb/design.claims.kb/principles.kb/one-home.md
 [DERIVED_RECORD]:
-  https://github.com/bukzor/bukzor-agent-skills/blob/main/docs/dev/claims.kb/design.claims.kb/principles.kb/a-derivable-rule-is-written-where-practice-missed-it.md
+  https://github.com/bukzor/bukzor-agent-skills/blob/main/docs/dev/claims.kb/design.claims.kb/principles.kb/a-derivable-rule-is-written-at-the-occasion-that-needs-it.md
