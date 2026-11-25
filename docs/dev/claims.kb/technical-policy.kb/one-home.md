@@ -16,12 +16,9 @@ authority:
 
 # Each conclusion, and the reasoning for it, has one home
 
-Everything else links to it. A file that delivers a rule at its occasion (a
-`CLAUDE.md`, a trigger) names the act and links to the home, and the home wins
-when they differ.
-
-A consequence of rules on file is written where it is used once practice shows
-it is missed. It cites its premises, which remain the home of its reasoning.
+Everything else links to it, and a consequence practice missed is written where
+it is used, citing its premises. This repo adopts the fleet's [ONE_HOME] and
+[DERIVED_RECORD], which were extracted from the rulings below.
 
 > [!@bukzor] 59b55f01
 >
@@ -31,3 +28,8 @@ it is missed. It cites its premises, which remain the home of its reasoning.
 > [!@bukzor] 59b55f01 -- of a consequence that "doesn't need to be written
 > down": _shouldn't, logically_ be necessary to write down; _isn't, practically_
 > necessary to write down. "These are highly related, but not generally equal."
+
+[ONE_HOME]:
+  https://github.com/bukzor/bukzor-agent-skills/blob/main/docs/dev/claims.kb/design.claims.kb/principles.kb/one-home.md
+[DERIVED_RECORD]:
+  https://github.com/bukzor/bukzor-agent-skills/blob/main/docs/dev/claims.kb/design.claims.kb/principles.kb/a-derivable-rule-is-written-where-practice-missed-it.md
