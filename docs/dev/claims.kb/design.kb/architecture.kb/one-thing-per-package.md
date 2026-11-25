@@ -4,6 +4,7 @@ standing: user
 why:
   - ../requirements.kb/one-job-each.md
   - lifetime-groups.md
+  - ../requirements.kb/names-show-structure.md
 authority:
   address: fb592418
   words:

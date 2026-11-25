@@ -27,10 +27,6 @@
       shrinks as process claims move out (baseline 2026-11-22: 4,315 words in 44
       files, by
       `find docs/dev/claims.kb/design.kb -name '*.md' | xargs cat | wc -w`).
-- [ ] bukzor's call: which milestone first uses atomics? `API_COVERAGE` named
-      them until the commit "Goals: each stance at its own level of abstraction"
-      trimmed its feature list, and no milestone in `milestone-ladder.kb/`
-      mentions them.
 - [ ] A root `README.md`, for a visitor arriving cold (`LEGIBLE_GROWTH`).
 - [ ] Milestone 0.3, bukzor's (roadmap:
       `docs/dev/claims.kb/design.kb/deliverables.kb/milestone-ladder.md`)

@@ -4,6 +4,7 @@ standing: user
 why:
   - ../goals.kb/keep-apart-from-throwaway.md
   - ../goals.kb/learning-ownership.md
+  - ../requirements.kb/names-show-structure.md
 authority:
   address: fb592418
   words:
