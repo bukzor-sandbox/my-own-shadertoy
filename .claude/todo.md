@@ -23,10 +23,8 @@
       lib, the `getContext("webgpu")` overload? Without `@webgpu/types` it
       returns `RenderingContext` and `configure` fails TS2339.
 - [ ] Fill `docs/dev/claims.kb/dev-process-design.kb/`, rung by rung, bukzor
-      ruling each. One success criterion, not the most important: `design.kb`
-      shrinks as process claims move out (baseline 2026-11-22: 4,315 words in 44
-      files, by
-      `find docs/dev/claims.kb/design.kb -name '*.md' | xargs cat | wc -w`).
+      ruling each. Its rules go in `technical-policy.kb/`; a process claim in
+      `design.kb` moves out only if it checks no goal there.
 - [ ] A root `README.md`, for a visitor arriving cold (`LEGIBLE_GROWTH`).
 - [ ] Milestone 0.3, bukzor's (roadmap:
       `docs/dev/claims.kb/design.kb/deliverables.kb/milestone-ladder.md`)
