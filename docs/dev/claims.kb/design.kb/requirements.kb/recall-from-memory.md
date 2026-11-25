@@ -8,12 +8,12 @@ why:
 
 # What a session taught can be written cold at the next
 
-Each concept a session taught bukzor becomes one unchecked recall item in
-`.claude/todo.md`, asking for the concept's model: what it is for and how its
-parts fit. The next session starts with bukzor trying each open item before
-opening the editor; one written cold is checked off, and a miss stays open for
-the session after. A miss is the signal that Claude did too much, or that the
-increment was too large.
+Each thing a session taught bukzor to write becomes one unchecked recall item in
+`.claude/todo.md`, naming the thing and its evidence but never its parts: "clear
+a canvas", not the calls that do it. The next session starts with bukzor writing
+each open item before opening the editor; one written cold is checked off, and a
+miss stays open unless bukzor closes it. A miss is the signal that Claude did
+too much, or that the increment was too large.
 
 `todo.md` is already where the next session looks, so recall and its completion
 need no other record.
