@@ -12,10 +12,9 @@ authority:
 
 # What survives a host-language swap is kept apart from what does not
 
-The program model and the WebGPU interpreter of it are kept; they carry the
-learning. The authoring and display side (editor, panels, app wiring) is
-expected to be replaced when authoring moves to Pyodide, Rust wasm, or Lean
-wasm. The two never share a file, so the replacement is a deletion.
+What carries the learning is kept. What does not is expected to be replaced when
+authoring moves to another host language, such as Pyodide, Rust wasm, or Lean
+wasm, and is kept apart so that replacing it is a deletion.
 
 > [!@bukzor] fb592418
 >

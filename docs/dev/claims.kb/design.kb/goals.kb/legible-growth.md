@@ -11,5 +11,4 @@ authority:
 # The codebase stays readable as it grows
 
 Many short sessions, some with Claude's help, must not add up to a sprawl. A
-reader arriving cold finds the structure by listing directories, and every part
-says what it is for.
+reader arriving cold can find their way around.

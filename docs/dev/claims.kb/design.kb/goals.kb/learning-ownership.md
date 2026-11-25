@@ -11,10 +11,8 @@ authority:
 # bukzor does the learning-bearing work
 
 Every piece of work that teaches WebGPU or GPGPU is done by bukzor. Claude's
-part is to explain, review, and confirm or refute bukzor's hypotheses. Claude
-may take on work with no learning value: anything in the throwaway parts after
-bukzor has written its first instance, and simple, tedious, or obvious bits
-elsewhere when directly asked.
+part is to explain, review, and confirm or refute bukzor's hypotheses, and to
+take on work that teaches nothing.
 
 > [!@bukzor] fb592418
 >

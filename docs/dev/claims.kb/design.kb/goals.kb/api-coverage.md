@@ -13,16 +13,10 @@ authority:
 
 # The toy grows to cover the WebGPU surface a practitioner uses
 
-The toy is compute-first: passes are compute shaders writing storage textures
-and buffers, blitted to the canvas. Each extension is a feature a
-Shadertoy-alike should have, and together they exercise compute pipelines,
-storage buffers, atomics, explicit bind group layouts, timestamp queries,
-readback, indirect dispatch, and (through a mesh pass) vertex and index buffers,
-instancing, depth, and indirect draws.
-
-Out of scope: operating the API under load -- hundreds of buffers, GPU-driven
-culling, asset streaming, CPU frame budgets. A Shadertoy-alike never exerts that
-pressure; it is a second project.
+The toy is compute-first, and each extension is a feature a Shadertoy-alike
+should have. Together they cover the WebGPU a practitioner uses. Operating the
+API under load is out of scope: a Shadertoy-alike never exerts that pressure, so
+it is a second project.
 
 > [!@bukzor] fb592418
 >

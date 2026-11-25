@@ -12,10 +12,9 @@ authority:
 
 # Progress comes in session-sized increments
 
-Each increment fits one short working session and leaves something visible in
-the browser or checkable by a test. Smaller is better, down to the size of one
-meaningful commit; below that, an increment is a step inside a milestone, not a
-milestone.
+Each increment fits one short working session and leaves something that can be
+seen or checked. Smaller is better, until a step no longer means anything on its
+own.
 
 > [!@bukzor] fb592418
 >

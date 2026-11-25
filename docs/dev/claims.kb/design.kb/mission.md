@@ -15,9 +15,7 @@ bukzor's understanding, not memorization, is the product, and bukzor is the one
 who benefits.
 
 Starting point: concepts known vaguely, practice none -- one triangle, long
-forgotten. TypeScript is a means to an end and is expected to shrink to WebGPU
-glue and interpreters once the authoring side moves to Pyodide, Rust wasm, or
-Lean wasm.
+forgotten. TypeScript is a means to an end, not something to learn.
 
 > [!@bukzor] fb592418
 >
