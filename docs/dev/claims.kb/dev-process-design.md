@@ -40,9 +40,6 @@ The rungs are governed by skill://llm-design-kb, each asked of the process.
 | `requirements` | How do we validate the goals are achieved?     |
 | `architecture` | Which parts satisfy the requirements, and how? |
 
-A process claim in `design.kb/` that checks one of its goals stays there and is
-cited from here. The rules this ledger concludes go in `technical-policy.kb/`.
-
 Conventions: [llm-design-kb] over [llm-claims-kb].
 
 [llm-design-kb]:

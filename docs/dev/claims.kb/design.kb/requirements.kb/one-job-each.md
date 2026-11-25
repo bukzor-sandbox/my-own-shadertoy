@@ -4,9 +4,11 @@ standing: user
 author: agent
 why:
   - ../goals.kb/legible-growth.md
+  - ../goals.kb/bite-sized-increments.md
 ---
 
 # Every unit states one job
 
-Each unit of code opens with a one-paragraph statement of its single job. A
-statement that needs "and" describes two units.
+Every unit of code or of work, from a package to a milestone or a commit, states
+its single job. A statement that needs "and" to join two abilities describes two
+units; one that joins an ability to what demonstrates it describes one.

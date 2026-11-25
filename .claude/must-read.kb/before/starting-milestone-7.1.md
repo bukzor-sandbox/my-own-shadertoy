@@ -1,4 +1,4 @@
-# Before starting milestone 7
+# Before starting milestone 7.1
 
 The mesh pass is the test [PASS_KIND_EXTENSION] waits for. Before it adds
 another pass kind, ask bukzor whether touching three places per pass kind (the

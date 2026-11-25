@@ -10,9 +10,8 @@ holds its claims.
 - A word this project stipulates goes in the `ontology:` of the outermost rung
   whose claims all need it.
 - A cross-cutting imperative goes in `../technical-policy.kb/`.
-- A claim about how the work gets done goes here only if it checks a goal here.
-  Otherwise it is argued in `../dev-process-design.kb/`, and the rule it
-  concludes goes in `../technical-policy.kb/`.
+- A claim about how the work gets done goes here only if it serves a claim here;
+  otherwise it goes in `../dev-process-design.kb/`.
 - A package's one job goes in its README, never here.
 - A claim that binds an act to an occasion, a tripwire most often, also gets an
   entry in `.claude/must-read.kb/` named for that occasion. A tripwire's entry

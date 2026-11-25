@@ -23,8 +23,13 @@
       lib, the `getContext("webgpu")` overload? Without `@webgpu/types` it
       returns `RenderingContext` and `configure` fails TS2339.
 - [ ] Fill `docs/dev/claims.kb/dev-process-design.kb/`, rung by rung, bukzor
-      ruling each. Its rules go in `technical-policy.kb/`; a process claim in
-      `design.kb` moves out only if it checks no goal there.
+      ruling each.
+- [ ] Fix up history once it settles (bukzor, 2026-11-25): reword the message of
+      "RECALL: an item names a thing to write, never its parts", which
+      misgenders bukzor, and squash the three "fixup! Goals: each stance at its
+      own level of abstraction" commits into their target.
+- [ ] Bring the root `CLAUDE.md`'s "Who writes what" to `ONE_HOME`: it restates
+      `CLAUDE_RELUCTANT` nearly word for word.
 - [ ] A root `README.md`, for a visitor arriving cold (`LEGIBLE_GROWTH`).
 - [ ] Milestone 0.3, bukzor's (roadmap:
       `docs/dev/claims.kb/design.kb/deliverables.kb/milestone-ladder.md`)

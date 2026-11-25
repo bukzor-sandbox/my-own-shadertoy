@@ -20,7 +20,7 @@ Then raise it with bukzor, to adopt or record a decline:
 
 - `webgpu-utils` (greggman): struct layouts read from WGSL, typed buffer views,
   mipmaps. It overlaps milestone 2.1's computed uniform layout.
-- `wgpu-matrix`: vector and matrix math, first needed for milestone 7's mesh
+- `wgpu-matrix`: vector and matrix math, first needed for milestone 7.1's mesh
   pass.
 - TypeGPU (Software Mansion): typed buffer schemas and shaders written in
   TypeScript, an alternative to the program model itself.

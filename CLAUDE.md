@@ -53,7 +53,9 @@ policy. Start at `docs/dev/claims.kb/design.md`. The roadmap is the roll-up
 `docs/dev/claims.kb/design.kb/deliverables.kb/milestone-ladder.md` and its
 collection, `milestone-ladder.kb/`. How the work gets done is a second ledger
 beside it, `docs/dev/claims.kb/dev-process-design.md`. Reading it needs nothing
-installed; maintaining it follows [llm-design-kb] and [llm-claims-kb].
+installed; maintaining it follows [llm-design-kb] and [llm-claims-kb]. Each
+conclusion, and its reasoning, has one home that everything else links to
+(`ONE_HOME`, in `docs/dev/claims.kb/technical-policy.kb/`).
 
 ## Current work
 

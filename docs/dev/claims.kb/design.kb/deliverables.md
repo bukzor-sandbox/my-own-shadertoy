@@ -5,6 +5,7 @@ author: agent
 why:
   - architecture.md
   - goals.kb/bite-sized-increments.md
+  - requirements.kb/green-commit-per-increment.md
 ontology:
   - milestone
   - tripwire

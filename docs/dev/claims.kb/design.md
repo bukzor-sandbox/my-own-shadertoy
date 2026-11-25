@@ -53,6 +53,9 @@ code, are in `technical-policy.md`.
 Priors are a DAG, not a ladder: a claim's `why:` names whatever claims it would
 be revisited over.
 
+Each rung answers its own question and leaves the rest underdefined: a detail
+that answers a lower rung's question goes on that rung.
+
 ## Scans
 
 ```bash
