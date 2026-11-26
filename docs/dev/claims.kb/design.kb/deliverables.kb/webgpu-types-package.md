@@ -24,7 +24,7 @@ make it visible to every workspace whether or not that workspace declares it.
 >
 > This deserves a note somewhere.
 
-> [!@bukzor] 4eef9346-7acb-4dc3-b420-793c767fa326
+> [!@bukzor] 4eef9346
 >
 > Making it visible repo-wide is the wrong direction; it doesn't belong in the
 > base config.

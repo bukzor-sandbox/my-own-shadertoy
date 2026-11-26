@@ -16,10 +16,11 @@ authority:
 
 # Each conclusion, and the reasoning for it, has one home
 
-Everything else links to it, and a consequence an occasion needs, which its
-reader there will not derive, is written at that occasion, citing its premises.
-This repo adopts the fleet's [ONE_HOME] and [DERIVED_RECORD], which were
-extracted from the rulings below.
+Each conclusion, and the reasoning for it, has one home, and everything else
+links to it. A consequence an occasion needs, which its reader there will not
+derive, is written at that occasion, citing its premises. This repo adopts the
+fleet's [one-home principle][fleet-one-home] and its [derived-record
+corollary][fleet-derived-record], which were extracted from the rulings below.
 
 > [!@bukzor] 59b55f01
 >
@@ -30,7 +31,7 @@ extracted from the rulings below.
 > down": _shouldn't, logically_ be necessary to write down; _isn't, practically_
 > necessary to write down. "These are highly related, but not generally equal."
 
-[ONE_HOME]:
+[fleet-one-home]:
   https://github.com/bukzor/bukzor-agent-skills/blob/main/docs/dev/claims.kb/design.claims.kb/principles.kb/one-home.md
-[DERIVED_RECORD]:
+[fleet-derived-record]:
   https://github.com/bukzor/bukzor-agent-skills/blob/main/docs/dev/claims.kb/design.claims.kb/principles.kb/a-derivable-rule-is-written-at-the-occasion-that-needs-it.md
