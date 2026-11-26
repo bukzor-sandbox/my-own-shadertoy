@@ -19,7 +19,3 @@ runner, which creates the resources and encodes each frame, and a dry run, which
 prints the resource plan and runs in node with no GPU. The dry run is what the
 node tests exercise, and its existence is the proof that the program model
 carries no WebGPU types.
-
-The model is extracted from hand-written code, not designed ahead of it: bukzor
-starts with no WebGPU practice, and an abstraction drawn before the API is
-familiar would be a guess.

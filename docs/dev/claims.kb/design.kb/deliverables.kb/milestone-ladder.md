@@ -6,6 +6,7 @@ why:
   - ../goals.kb/api-coverage.md
   - ../goals.kb/bite-sized-increments.md
   - ../requirements.kb/one-job-each.md
+  - ../requirements.kb/first-instances-are-bukzors.md
   - ../architecture.kb/one-thing-per-package.md
 ---
 

@@ -4,6 +4,7 @@ standing: user
 author: agent
 why:
   - dependency-direction.md
+  - webgpu-call-sites.md
 ---
 
 # `@webgpu/types` supplies what the DOM lib's WebGPU types lack
