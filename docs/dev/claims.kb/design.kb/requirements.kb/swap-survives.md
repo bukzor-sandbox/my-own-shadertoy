@@ -9,4 +9,5 @@ why:
 # Deleting the throwaway side leaves the kept side whole
 
 With every throwaway part deleted, the kept parts still typecheck and their
-tests still pass. A program written by any other host runs unchanged.
+tests still pass. Work authored in any other host runs on the kept parts
+unchanged.
