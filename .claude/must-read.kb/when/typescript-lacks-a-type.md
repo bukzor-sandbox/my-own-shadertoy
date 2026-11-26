@@ -11,4 +11,4 @@ Node). Add that package to the failing workspace's `devDependencies` and to the
 lags: update it.
 
 [WEBGPU_TYPES_PACKAGE]:
-  ../../../docs/dev/claims.kb/design.kb/deliverables.kb/webgpu-types-package.md
+  ../../../docs/dev/claims.kb/design.kb/architecture.kb/webgpu-types-package.md

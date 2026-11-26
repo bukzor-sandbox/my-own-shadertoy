@@ -3,7 +3,7 @@ label: WEBGPU_TYPES_PACKAGE
 standing: user
 author: agent
 why:
-  - ../architecture.kb/dependency-direction.md
+  - dependency-direction.md
 ---
 
 # `@webgpu/types` supplies what the DOM lib's WebGPU types lack

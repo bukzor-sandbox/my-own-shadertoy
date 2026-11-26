@@ -1,10 +1,10 @@
 # Before starting milestone 1.2
 
 From 1.2 on, WebGPU calls belong only in `packages/gpu/` and `packages/passes/`,
-and the gpu-info page's demos already make them from `apps/`. So
-[DEPENDENCY_DIRECTION]'s tripwire trips here: propose to bukzor the lint rule
-that keeps WebGPU calls in those two groups, and whether the demos move into a
-package or take the rule's exemption.
+and the app's pages (the gpu-info demos, the canvas page's clear) already make
+them from `apps/`. So [WEBGPU_CALL_LINT]'s tripwire trips here: propose to
+bukzor the lint rule that keeps WebGPU calls in those two groups, and whether
+those calls move into a package or take the rule's exemption.
 
-[DEPENDENCY_DIRECTION]:
-  ../../../docs/dev/claims.kb/design.kb/architecture.kb/dependency-direction.md
+[WEBGPU_CALL_LINT]:
+  ../../../docs/dev/claims.kb/design.kb/deliverables.kb/webgpu-call-lint.md
