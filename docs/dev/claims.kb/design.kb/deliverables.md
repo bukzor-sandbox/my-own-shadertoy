@@ -19,3 +19,10 @@ sub-milestone without renumbering. A **tripwire** is a deliverable scheduled on
 an occasion instead of a position in the ladder. Each tripwire's occasion also
 names an entry in `.claude/must-read.kb/`, the trigger bank every session lists,
 so the occasion is recognized when it arrives.
+
+Conventions: [llm-design-kb] over [llm-claims-kb].
+
+[llm-design-kb]:
+  https://github.com/bukzor/bukzor-agent-skills/blob/main/llm-design-kb/SKILL.md
+[llm-claims-kb]:
+  https://github.com/bukzor/bukzor-agent-skills/blob/main/llm-claims-kb/SKILL.md
